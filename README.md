@@ -3,10 +3,10 @@
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Movie Recommender w/SQL
  
- > Authors: [Brandon Sun](https://github.com/sunbrandon),
-            [Aaron Lin](https://github.com/aaronlin79),
-            [David Lee](https://github.com/davidbjol),
-            [Darren Banh](https://github.com/darrenbanh)
+ > Author(s): Brandon Sun ([@sunbrandon](https://github.com/sunbrandon)),
+            Aaron Lin ([@aaronlin79](https://github.com/aaronlin79)),
+            David Lee ([davidbjol](https://github.com/davidbjol)),
+            Darren Banh ([darrenbanh](https://github.com/darrenbanh))
 
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
