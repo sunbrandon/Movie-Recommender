@@ -1,22 +1,24 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# Movie Recommender w/SQL
+# Movie Recommender
  
  > Author(s): Brandon Sun ([@sunbrandon](https://github.com/sunbrandon)),
             Aaron Lin ([@aaronlin79](https://github.com/aaronlin79)),
-            David Lee ([davidbjol](https://github.com/davidbjol)),
-            Darren Banh ([darrenbanh](https://github.com/darrenbanh))
+            David Lee ([@davidbjol](https://github.com/davidbjol)),
+            Darren Banh ([@darrenbanh](https://github.com/darrenbanh))
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
+ > A movie recommender implemented with C++ and possibly SQL
  > * Why is it important or interesting to you?
+>> * We found this project interesting because we wanted to work with data bases and movies are a great way to implement a data base search system that has real world applications.
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+>>  * In order to build this project we plan on using C++ and implenting a SQL database with MySQL/BigQuery and connecting it using the C++ library SQLAPI++/SQLite
  > * What will be the input/output of your project?
+>>  * For our project we'll ask the user to input a movie name and recommend movies using different algorithms that will match based on things like genre, list of actors, directors, etc. as well as allowing the user to search for movies based on previously recommended movies.
  > * What are the features that the project provides?
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+>>  * We will have a list of options to search and recommend movies based on different algorithms like movie genre, actors, directors, length, etc. 
  > 
- > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
