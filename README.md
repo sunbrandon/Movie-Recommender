@@ -1,7 +1,4 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# Movie Recommender
+ # Movie Recommender
  
  > Author(s): Brandon Sun ([@sunbrandon](https://github.com/sunbrandon)),
             Aaron Lin ([@aaronlin79](https://github.com/aaronlin79)),
