@@ -21,14 +21,14 @@
 
 ### Navigation Diagram
 >  ![Navigation Diagram](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/132787942/4d1fc0d3-ea6f-41cb-8b31-4cb562996b95)\
-   Diagram of the movie recommendator including the various decision branches included in the program.
+Diagram of the movie recommendator including the various decision branches included in the program.
 
 ### Screen Layouts
 > ![Screen Layout](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/132787942/4c011715-91de-4117-b55f-5f34e1759e5f)
 
 ## Class Diagram
  > ![UML](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/132787942/04c09e43-991f-4cb1-b012-b98da62f8311)\
-   Diagram of our program's main classes including the inheritances of each class and the relationships between each class.
+Diagram of our program's main classes including the inheritances of each class and the relationships between each class.
 
  
  > ## Phase III
