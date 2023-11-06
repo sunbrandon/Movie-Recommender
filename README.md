@@ -7,12 +7,16 @@
 
 ## Project Description
    A movie recommender implemented with C++ and possibly SQL
+
 Why is it important or interesting to you?
    * We found this project interesting because we wanted to work with data bases and movies are a great way to implement a data base search system that has real world applications. Our project will help people with certain movie preferences to be able to find other movies similar to what the like and make the hunt for finding something good to watch a lot easier.
+
 What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
    * In order to build this project we plan on using C++ and implenting an SQL database with MySQL/BigQuery and connecting it using the C++ library SQLAPI++/SQLite. This would allow us to write the majority of our code in C++ while having the ability to traverse different data bases based on things like genre, release date, actors, etc. instead of having everything locally.
+
 What will be the input/output of your project?
    * For our project we will ask the user to input a movie name and our program will use different algorithms to recommened and output a list of movies based on similarities like genre, release date, actors, etc. with the movie the user input. We will also allow the user to search for movies based on their preferences with genre, release dates, actors, etc.
+
 What are the features that the project provides?
    * We will have a list of options for the user to choose from in order to search and recommend movies based on different algorithms like movie genre, actors, directors, length, etc. Our program will give the user the freedom to decide whether they want to find a movie similar to one they already like or if they want to find movies that are under a given genre, director, era, or contains an actor that they like.
  
