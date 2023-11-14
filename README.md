@@ -32,7 +32,7 @@ Diagram of the movie recommendator including the various decision branches inclu
 
 ## Class Diagram
    ![UML](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/132787942/04c09e43-991f-4cb1-b012-b98da62f8311)\
-Diagram of our program's main classes including the inheritances of each class and the relationships between each class.
+Diagram of our program's main classes including the inheritances of each class and the relationships between each class.  Menu is dependant on a variety of classes such as SearchInterface, Question, mySQL, Movie, Result.  SearchInterface will have two inherited classes SearchFilter and SearchSimilar, each different types of searches.  The SelectSearch interface is something which is also used in searchInterface.  The Question class creates a multitude of Question inhereted classes.  Result also creates a multitude of result inherited classes.  mySQL and Movie are also classes which work within the Menu class. 
 
  
  > ## Phase III
