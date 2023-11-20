@@ -43,5 +43,12 @@ void Menu::selectChoice() {
         if (choice == 'b') {
             selectChoice();
         }
+        if (choice == 'a') {
+            cin.ignore();
+            surpriseResult();
+            cout << "Enter an option: ";
+            cin >> choice;
+            cout << endl;
+        }
     }
 }
