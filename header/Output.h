@@ -17,7 +17,11 @@ class Output {
   void questionOut5();
   void searchChoiceOut();
   void similarOut();
-  void filterOut();
+  void filterOutGenre();
+  void filterOutYear();
+  void filterOutDuration();
+  void filterOutRating();
+  void filterOutPopularity();
  
  private:
 

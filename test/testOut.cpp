@@ -5,5 +5,11 @@
 using namespace std;
 
 int main() {
-    return 0;
+    Output *o = new Output();
+    o->filterOutGenre();
+    o->filterOutYear();
+    o->filterOutDuration();
+    o->filterOutRating();
+    o->filterOutPopularity();
+    delete o;
 }
