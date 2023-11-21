@@ -7,17 +7,23 @@ using namespace std;
 class Movie {
  public:
 
-    Movie();
-    Movie(string, int, vector<string>, double, int);
-    ~Movie();
+   Movie();
+   Movie(string, int, vector<string>, double, int);
+   ~Movie();
   
  private:
 
-    string title;
-    int year;
-    vector<string> genres;
-    double rating;
-    int numOfVotes;
-    Movie operator=(const Output&) = delete;
+   int year;
+   int numOfVotes;
+   int duration
+   double rating;
+   string title;
+   string producer;
+   vector<string> genres;
+   vector<string> directors;
+   vector<string> writers;
+   vector<string> actors;
+   vector<string> descriptions;
+   Movie operator=(const Output&) = delete;
 
 };
