@@ -8,4 +8,4 @@ ADD_EXECUTABLE(testOut
     ../src/Output.cpp
 )
 
-target_link_libraries(testRandom gmock gtest gtest_main)
+target_link_libraries(testOut gmock gtest gtest_main)
