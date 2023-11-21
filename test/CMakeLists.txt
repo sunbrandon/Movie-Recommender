@@ -3,9 +3,9 @@ project(test_menu)
 
 add_subdirectory(googletest)
 
-ADD_EXECUTABLE(testRandom
-    randomTest.cpp
-    ../src/Menu.cpp
+ADD_EXECUTABLE(testOut
+    testOut.cpp
+    ../src/Output.cpp
 )
 
 target_link_libraries(testRandom gmock gtest gtest_main)
