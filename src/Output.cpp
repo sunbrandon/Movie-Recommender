@@ -79,7 +79,12 @@ void Output::searchChoiceOut() {
     cout << endl;
 }
 
-void Output::similarOut() {}
+void Output::similarOut() {
+
+    cout << "Please insert a previously watched movie: " << endl;
+    cout << endl;
+
+}
 
 void Output::filterOutGenre() {
 
