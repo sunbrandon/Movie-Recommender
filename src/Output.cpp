@@ -8,7 +8,17 @@ Output::Output() {}
 
 Output::~Output() {}
 
-void Output::outputMenu() {}
+void Output::outputMenu() {
+    cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
+    cout << endl;
+    cout << "Please select your option from the list." << endl;
+    cout << endl;
+    cout << "1. Search" << endl;
+    cout << "2. Quiz" << endl;
+    cout << "3. Surprise" << endl;
+    cout << "q. Exit" << endl;
+    cout << endl;
+}
 
 void Output::questionOut1() {}
 
