@@ -5,5 +5,10 @@
 using namespace std;
 
 int main() {
+
+    Output* o = new Output();
+    o->searchChoiceOut();
+    delete o;
+
     return 0;
 }

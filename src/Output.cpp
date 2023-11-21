@@ -20,7 +20,14 @@ void Output::questionOut4() {}
 
 void Output::questionOut5() {}
 
-void Output::searchChoiceOut() {}
+void Output::searchChoiceOut() {
+    cout << "Select which search to use:" << endl;
+    cout << endl;
+    cout << "a. Search Similar" << endl;
+    cout << "b. Search Filter" << endl;
+    cout << "c. Back" << endl;
+    cout << endl;
+}
 
 void Output::similarOut() {}
 
