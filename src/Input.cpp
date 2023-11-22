@@ -40,7 +40,7 @@ char Input::getSearch() {}
 string Input::getSimilar() {}
 
 vector<string> Input::getFilter() {
-    vector<string> filterInputs;
+    vector<string> *filterInputs = this->filterIn;
 
     string genreInput;
     string yearInput;
@@ -61,7 +61,7 @@ vector<string> Input::getFilter() {
             genreInput != "11" & genreInput != "12" & genreInput != "13" & genreInput != "14" & genreInput != "15" & 
             genreInput != "16" & genreInput != "17" & genreInput != "18" & genreInput != "19" & genreInput != "20"); 
     
-    filterInputs.push_back(genreInput);
+    *filterInputs.push_back(genreInput);
     
     filterOutYear();
     do {
@@ -69,7 +69,7 @@ vector<string> Input::getFilter() {
     }
     while (yearInput != "a" & yearInput != "b" & yearInput != "c" & yearInput != "d" & yearInput != "e");
 
-    filterInputs.push_back(yearInput);
+    *filterInputs.push_back(yearInput);
 
     filterOutDuration();
     do {
@@ -77,7 +77,7 @@ vector<string> Input::getFilter() {
     }
     while (durationInput != "a" & durationInput != "b" & durationInput != "c" & durationInput != "d" & durationInput != "e" & durationInput != "f");
 
-    filterInputs.push(durationInput);
+    *filterInputs.push(durationInput);
     
     filterOutRating();
     do {
@@ -85,7 +85,7 @@ vector<string> Input::getFilter() {
     }
     while (ratingInput != "a" & ratingInput != "b" & ratingInput != "c" & ratingInput != "d" & ratingInput != "e" & ratingInput != "f" & ratingInput != "g");
 
-    filterInput.push(ratingInput);
+    *filterInput.push(ratingInput);
 
     filterOutPopularity() {
     do {
@@ -93,9 +93,9 @@ vector<string> Input::getFilter() {
     }
     while (popularityInput != "a" & popularityInput != "b" & popularityInput != "c" & popularityInput != "d" & popularityInput != "e");
 
-    filterInputs.push(popularityInput);
+    *filterInputs.push(popularityInput);
 
-    return filterInputs;
+    return this->filterIn;
     }
 }
 
