@@ -40,7 +40,7 @@ Diagram of our program's main classes including the inheritances of each class a
 ## Updated Class Diagram
    ![Updated UML-1](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/132787942/39cd94f5-8acf-42e9-9124-636085437edf)
 
-Our updated UML diagram was significantly overhalled for both clarity and accounting for SOLID principles:
+Our updated UML diagram was significantly overhauled for both clarity and accounting for SOLID principles:
 
 For clarity, we consolidated our classes such as Question and Result to having unique functions for each output rather than having multiple classes for different outputs.  Futhermore, we removed redundant classes such as SelectSearch which were better classified as a more wholistic Output class.  We also went through and fixed the private and public variables to better reflect the functionality of class.  We removed the SQL class after understanding that implementing the database link into the CS100 server was unnfeasible, and instead opted into using CSV dataset for a more efficient workflow.  
 
