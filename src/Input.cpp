@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -37,7 +38,18 @@ char Input::getMenu() {
 
 char Input::getSearch() {}
 
-string Input::getSimilar() {}
+string Input::getSimilar() {
+    similarOut();
+    string *similarInput = this->similarIn;
+
+    cin >> *similarInput;
+
+    for (int i = 0; i < *similarInput->length(); i++) {
+        *similarInput.at(i) = toupper(*similarInput.at(i));
+    }
+
+    return similarIn;
+}
 
 vector<string> Input::getFilter() {
     vector<string> *filterInputs = this->filterIn;

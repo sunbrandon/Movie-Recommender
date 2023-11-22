@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 #include "Output.h"
 
 using namespace std;
