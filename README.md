@@ -35,25 +35,11 @@ Diagram of the movie recommendator including the various decision branches inclu
 Diagram of our program's main classes including the inheritances of each class and the relationships between each class.  Menu is dependant on a variety of classes such as SearchInterface, Question, mySQL, Movie, Result.  SearchInterface will have two inherited classes SearchFilter and SearchSimilar, each different types of searches.  The SelectSearch interface is something which is also used in searchInterface.  The Question class creates a multitude of Question inhereted classes.  Result also creates a multitude of result inherited classes.  mySQL and Movie are also classes which work within the Menu class. 
 
  
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
+## Phase III
+
+## Updated Class Diagram
+   ![Updated UML-1](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/132787942/39cd94f5-8acf-42e9-9124-636085437edf)
+
 
  
  > ## Final deliverable
