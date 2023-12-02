@@ -3,9 +3,10 @@ project(test_menu)
 
 add_subdirectory(googletest)
 
-ADD_EXECUTABLE(testOut
+ADD_EXECUTABLE(test
     testOut.cpp
+    ../src/Input.cpp
     ../src/Output.cpp
 )
 
-target_link_libraries(testOut gmock gtest gtest_main)
+target_link_libraries(test gmock gtest gtest_main)

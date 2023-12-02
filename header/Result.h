@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class Result : public Search : public Quiz : public Random {
+class Result : public Search, public Quiz, public Random {
  public:
 
     Result();

@@ -11,7 +11,7 @@ Input::Input() {}
 
 Input::~Input() {}
 
-char Input::getMenu() {
+void Input::getMenu() {
     char input;
     outputMenu();
         
@@ -33,10 +33,30 @@ char Input::getMenu() {
     else if (input == 'q') {
         cout << "IMPLEMENT: EXIT" << endl;
     }
-    
+
 }
 
-char Input::getSearch() {}
+char Input::getSearch() {
+    char input;
+    searchChoiceOut();
+
+    do {
+        cin >> input;
+        cout << endl;
+    } while (input != 'a' & input != 'b' & input != 'c');
+
+    if (input == 'a') {
+        cout << "Implement similar search option" << endl;
+    }
+    else if (input == 'b') {
+        cout << "Implement filter search option" << endl;
+    }
+    else if (input == 'c') {
+        cout << "Implement return to menu option" << endl;
+    }
+
+    return input;
+}
 
 string Input::getSimilar() {
     similarOut();
