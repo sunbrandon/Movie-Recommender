@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Search : public Input : public Sort {
+class Search : public Input, public Sort {
  public:
 
     Search();

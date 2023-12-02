@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Quiz : public Input : public Sort {
+class Quiz : public Input, public Sort {
  public:
 
     Quiz();

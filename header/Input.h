@@ -11,7 +11,7 @@ class Input : public Output {
 
    Input();
    ~Input();
-   char getMenu();
+   void getMenu();
    char getSearch();
    string getSimilar();
    vector<string> getFilter();

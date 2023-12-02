@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     Input *o = new Input();
-    o->getQuiz();
+    o->getSearch();
     delete o;
 
     return 0;

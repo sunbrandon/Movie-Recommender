@@ -6,7 +6,7 @@
 
 using namespace std;
 
-class Random : public Input : public Sort {
+class Random : public Input, public Sort {
  public:
 
     Random();
