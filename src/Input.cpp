@@ -40,20 +40,19 @@ char Input::getSearch() {}
 
 string Input::getSimilar() {
     similarOut();
-    string *similarInput = this->similarIn;
 
-    cin >> *similarInput;
+    unsigned int stringLength = this->similarIn.length();
 
-    for (int i = 0; i < *similarInput->length(); i++) {
-        *similarInput.at(i) = toupper(*similarInput.at(i));
+    cin >> this->similarIn;
+
+    for (int i = 0; i < stringLength; i++) {
+        this->similarIn.at(i) = toupper(this->similarIn.at(i));
     }
 
     return similarIn;
 }
 
 vector<string> Input::getFilter() {
-    vector<string> *filterInputs = this->filterIn;
-
     string genreInput;
     string yearInput;
     string durationInput;
@@ -73,7 +72,7 @@ vector<string> Input::getFilter() {
             genreInput != "11" & genreInput != "12" & genreInput != "13" & genreInput != "14" & genreInput != "15" & 
             genreInput != "16" & genreInput != "17" & genreInput != "18" & genreInput != "19" & genreInput != "20"); 
     
-    *filterInputs.push_back(genreInput);
+    filterIn.push_back(genreInput);
     
     filterOutYear();
     do {
@@ -81,7 +80,7 @@ vector<string> Input::getFilter() {
     }
     while (yearInput != "a" & yearInput != "b" & yearInput != "c" & yearInput != "d" & yearInput != "e");
 
-    *filterInputs.push_back(yearInput);
+    filterIn.push_back(yearInput);
 
     filterOutDuration();
     do {
@@ -89,7 +88,7 @@ vector<string> Input::getFilter() {
     }
     while (durationInput != "a" & durationInput != "b" & durationInput != "c" & durationInput != "d" & durationInput != "e" & durationInput != "f");
 
-    *filterInputs.push(durationInput);
+    filterIn.push_back(durationInput);
     
     filterOutRating();
     do {
@@ -97,19 +96,19 @@ vector<string> Input::getFilter() {
     }
     while (ratingInput != "a" & ratingInput != "b" & ratingInput != "c" & ratingInput != "d" & ratingInput != "e" & ratingInput != "f" & ratingInput != "g");
 
-    *filterInput.push(ratingInput);
+    filterIn.push_back(ratingInput);
 
-    filterOutPopularity() {
+    filterOutPopularity();
     do {
         cin >> popularityInput;
     }
     while (popularityInput != "a" & popularityInput != "b" & popularityInput != "c" & popularityInput != "d" & popularityInput != "e");
 
-    *filterInputs.push(popularityInput);
+    filterIn.push_back(popularityInput);
 
     return this->filterIn;
-    }
 }
+
 
 vector<char> Input::getQuiz() {
     vector<char> quizInputs;

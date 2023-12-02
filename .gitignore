@@ -5,3 +5,8 @@ Makefile
 testOut
 bin/
 lib/
+googletest-build/
+googletest-download/
+CMakeLists.txt.in 
+main.cpp
+README.md
