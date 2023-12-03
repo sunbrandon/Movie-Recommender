@@ -7,6 +7,8 @@ ADD_EXECUTABLE(test
     testOut.cpp
     ../src/Input.cpp
     ../src/Output.cpp
+    ../src/Sort.cpp
+    ../src/Movie.cpp
 )
 
 target_link_libraries(test gmock gtest gtest_main)
