@@ -30,7 +30,7 @@ int main() {
     //     cout << i << ": " << movieVector.at(i).getNumOfVotes() << endl;
     // }
 
-    vector<string> aV = movieVector.at(2).getDescriptions();
+    vector<string> aV = movieVector.at(2).getActors();
 
     for (int i = 0; i < aV.size(); i++) {
         cout << aV.at(i) << endl;

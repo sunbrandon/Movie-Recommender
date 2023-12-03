@@ -40,6 +40,9 @@ vector<Movie> Sort::sortCSV() {
 
                 while (ssg.good()) {
                     string isoGenre;
+                    if(ssg.peek() == ' ') {
+                        ssg.get();
+                    }
                     getline(ssg, isoGenre, ',');
                     genreV.push_back(isoGenre);
                 }
@@ -67,6 +70,9 @@ vector<Movie> Sort::sortCSV() {
 
                 while (ssd.good()) {
                     string isoDir;
+                    if(ssd.peek() == ' ') {
+                        ssd.get();
+                    }
                     getline(ssd, isoDir, ',');
                     directorsV.push_back(isoDir);
                 }
@@ -92,6 +98,9 @@ vector<Movie> Sort::sortCSV() {
 
                 while (ssw.good()) {
                     string isoWriters;
+                    if(ssw.peek() == ' ') {
+                        ssw.get();
+                    }
                     getline(ssw, isoWriters, ',');
                     writersV.push_back(isoWriters);
                 }
@@ -119,6 +128,9 @@ vector<Movie> Sort::sortCSV() {
 
                 while (ssa.good()) {
                     string isoActors;
+                    if(ssa.peek() == ' ') {
+                        ssa.get();
+                    }
                     getline(ssa, isoActors, ',');
                     actorsV.push_back(isoActors);
                 }
