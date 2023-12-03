@@ -4,6 +4,7 @@
 #include <vector>
 #include "Input.h"
 #include "Movie.h"
+#include "Sort.h"
 
 using namespace std;
 
