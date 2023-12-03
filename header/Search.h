@@ -15,7 +15,7 @@ class Search : public Input, public Sort {
     ~Search();
     vector<Movie> simlarAlgo();
     vector<Movie> filterAlgo();
-    void searchSimilarPoints();
+    void searchSimilarPoints(string);
     void genreFilterPoints();
     void yearFilterPoints();
     void durationFilterPoints();
@@ -25,6 +25,6 @@ class Search : public Input, public Sort {
  private:
 
     Search operator=(const Output&) = delete;
-    vector <unsigned int> points;
+    vector<unsigned> points;
 
 };
