@@ -80,70 +80,71 @@ void Search::searchSimilarPoints(string movieInput) {
 void Search::genreFilterPoints() {
     for (unsigned i = 0; i < 100; ++i){
         //OPTIMIZE
-        // if (movies.at(i).getGenres().size() == 1) {
-
-        // }
+        // if (movies.at(i).getGenres().size() == 1) {}
+        // else {} for cases of 2 or 3 genres
+        // also put genres into a vector of strings and compare vector to vector with an additional for loop
         
-        //FIX SINCE getGenres() RETURNS A VECTOR OF STRINGS
-        if (movies.at(i).getGenres() == "Action"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Adventure"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Animation"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Biography"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Comedy"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Crime"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Drama"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Family"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Fantasy"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Film-Noir"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "History"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Horror"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Music"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Musical"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Mystery"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Romance"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Sci-Fi"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Thriller"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "War"){
-            points.at(i) += 1;
-        }
-        else if (movies.at(i).getGenres() == "Western"){
-            points.at(i) += 1;
+        for (unsigned j = 0; j < movies.at(i).getGenres().size(); j++) {
+            if (movies.at(i).getGenres().at(j) == "Action"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Adventure"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Animation"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Biography"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Comedy"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Crime"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Drama"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Family"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Fantasy"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Film-Noir"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "History"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Horror"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Music"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Musical"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Mystery"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Romance"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Sci-Fi"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Thriller"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "War"){
+                points.at(i) += 1;
+            }
+            else if (movies.at(i).getGenres().at(j) == "Western"){
+                points.at(i) += 1;
+            }
         }
     }
 }
