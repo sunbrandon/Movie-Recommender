@@ -13,6 +13,10 @@ Search::Search() {
 
 Search::~Search() {}
 
+vector<unsigned> Search::getPoints() {  //if issues, check here
+    return this->points;
+}
+
 vector<Movie> Search::simlarAlgo() {}
 
 vector<Movie> Search::filterAlgo() {}
