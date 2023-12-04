@@ -13,6 +13,7 @@ class Search : public Input, public Sort {
 
     Search();
     ~Search();
+    vector<unsigned> getPoints();
     vector<Movie> simlarAlgo();
     vector<Movie> filterAlgo();
     void searchSimilarPoints(string);
