@@ -14,7 +14,8 @@ class Search : public Input, public Sort {
     Search();
     ~Search();
     vector<unsigned> getPoints();
-    vector<Movie> simlarAlgo();
+
+    vector<Movie> simlarAlgo(vector<Movie> &sortedList);
     vector<Movie> filterAlgo(vector<Movie>&, vector<string>&);
     void searchSimilarPoints(string, vector<Movie>&);
     void genreFilterPoints(vector<Movie>&, vector<string>&);

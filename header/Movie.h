@@ -68,6 +68,6 @@ class Movie {
    vector<string> actors;
    vector<string> descriptions;
 
-   Movie operator=(const Movie&) = delete;
+   //Movie operator=(const Movie&) = delete;
 
 };
