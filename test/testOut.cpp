@@ -5,6 +5,7 @@
 #include "../header/Input.h"
 #include "../header/Sort.h"
 #include "../header/Movie.h"
+#include "../header/Search.h"
 
 using namespace std;
 
@@ -30,11 +31,25 @@ int main() {
     //     cout << i << ": " << movieVector.at(i).getNumOfVotes() << endl;
     // }
 
-    vector<string> aV = movieVector.at(2).getActors();
+    //vector<string> aV = movieVector.at(2).getActors();
 
-    for (int i = 0; i < aV.size(); i++) {
-        cout << aV.at(i) << endl;
-    }
+    // for (int i = 0; i < movieVector.size(); i++) {
+    //     cout << movieVector.at(i).getTitle() << endl;
+    // }
 
+    Input* in = new Input();
+    vector<string> fin = in->getFilter();
+
+    cout << endl;
+
+    //cout << movieVector.size() << endl;
+    Search* ts = new Search();
+    vector<Movie> filterVector;
+    filterVector = ts->filterAlgo(movieVector, fin);
+
+    cout << filterVector.at(0).getTitle() << endl;
+    cout << filterVector.at(1).getTitle() << endl;
+    cout << filterVector.at(2).getTitle() << endl;
+    
     return 0;
 }
