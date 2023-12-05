@@ -21,7 +21,7 @@ vector<unsigned> Search::getPoints() {  //if issues, check here
 }
 
 
-vector<Movie> Search::simlarAlgo(vector<Movie> &sortedList) {
+vector<Movie> Search::similarAlgo(vector<Movie> &sortedList) {
     vector<Movie> similarRecommend;
 
     string similarTitle = getSimilar();
@@ -119,7 +119,9 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by year
         if (movies.at(i).getYear() >= movies.at(m).getYear() - 5 & movies.at(i).getYear() <= movies.at(m).getYear() + 5) {
-            points.at(i) += 1;
+            if (movies.at(i).getTitle() != movieInput) {
+                points.at(i) += 1;
+            }
         }
     }
 
@@ -127,7 +129,9 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
         for (unsigned j = 0; j < movies.at(i).getGenres().size(); j++) {    //compared to size of getGenres() vector for i-th movie
             for (unsigned k = 0; k < movies.at(m).getGenres().size(); k++) {  //compared to size of getGenres() vector for movieInput
                 if (movies.at(m).getGenres().at(k) == movies.at(i).getGenres().at(j)) { //comparing genres case-by-case
-                    points.at(i) += 3;
+                    if (movies.at(i).getTitle() != movieInput) {
+                        points.at(i) += 3;
+                    }
                 }
             }
         }
@@ -135,16 +139,22 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by duration
         if (movies.at(i).getDuration() >= movies.at(m).getDuration() - 7 & movies.at(i).getDuration() <= movies.at(m).getDuration() + 7) {  //approx. standard deviation of 7
-            points.at(i) += 2;
+            if (movies.at(i).getTitle() != movieInput) {
+                points.at(i) += 2;
+            }
         }
         else if (movies.at(i).getDuration() >= movies.at(m).getDuration() - 15 & movies.at(i).getDuration() <= movies.at(m).getDuration() + 15) {   //approx. two standard deviations
-            points.at(i) += 1;
+            if (movies.at(i).getTitle() != movieInput) {
+                points.at(i) += 1;
+            }
         }
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by popularity (number of votes)
         if (movies.at(i).getNumOfVotes() >= movies.at(m).getNumOfVotes() - 100000 & movies.at(i).getNumOfVotes() <= movies.at(m).getNumOfVotes() + 100000) {
-            points.at(i) += 1;
+            if (movies.at(i).getTitle() != movieInput) {
+                points.at(i) += 1;
+            }
         }
     }
 
@@ -152,7 +162,9 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
         for (unsigned j = 0; j < movies.at(i).getDirectors().size(); j++) {    //compared to size of getDirectors() vector for i-th movie
             for (unsigned k = 0; k < movies.at(m).getDirectors().size(); k++) {  //compared to size of getDirectors() vector for movieInput
                 if (movies.at(m).getDirectors().at(k) == movies.at(i).getDirectors().at(j)) { //comparing directors case-by-case
-                    points.at(i) += 2;
+                    if (movies.at(i).getTitle() != movieInput) {
+                        points.at(i) += 2;
+                    }
                 }
             }
         }
@@ -162,7 +174,9 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
         for (unsigned j = 0; j < movies.at(i).getActors().size(); j++) {    //compared to size of getActors() vector for i-th movie
             for (unsigned k = 0; k < movies.at(m).getActors().size(); k++) {  //compared to size of getActors() vector for movieInput
                 if (movies.at(m).getActors().at(k) == movies.at(i).getActors().at(j)) { //comparing actors case-by-case
-                    points.at(i) += 1;
+                    if (movies.at(i).getTitle() != movieInput) {
+                        points.at(i) += 1;
+                    }
                 }
             }
         }
