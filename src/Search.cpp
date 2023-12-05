@@ -22,6 +22,10 @@ vector<unsigned> Search::getPoints() {  //if issues, check here
 vector<Movie> Search::simlarAlgo(vector<Movie> &sortedList) {
     vector<Movie> similarRecommend;
 
+    string similarTitle = getSimilar();
+
+    searchSimilarPoints(similarTitle, sortedList);
+
     unsigned count = 0;
 
     unsigned max1 = 0;
