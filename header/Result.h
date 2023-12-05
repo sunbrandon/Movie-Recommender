@@ -15,7 +15,7 @@ class Result : public Search, public Quiz, public Random {
     void quizResult();
     void similarResult();
     void filterResult();
-    void randomResult();
+    void randomResult(Movie movie);
   
  private:
 
