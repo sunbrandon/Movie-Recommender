@@ -37,15 +37,15 @@ int main() {
     //     cout << movieVector.at(i).getTitle() << endl;
     // }
 
-    Input* in = new Input();
-    vector<string> fin = in->getFilter();
+    // Input* in = new Input();
+    // vector<string> fin = in->getFilter();
 
     cout << endl;
 
     //cout << movieVector.size() << endl;
     Search* ts = new Search();
     vector<Movie> filterVector;
-    filterVector = ts->filterAlgo(movieVector, fin);
+    filterVector = ts->similarAlgo(movieVector);
 
     cout << filterVector.at(0).getTitle() << endl;
     cout << filterVector.at(1).getTitle() << endl;
