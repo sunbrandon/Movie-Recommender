@@ -5,6 +5,7 @@
 #include "Input.h"
 #include "Movie.h"
 #include "Sort.h"
+#include "Search.h"
 
 using namespace std;
 
@@ -13,15 +14,15 @@ class Quiz : public Input, public Sort {
 
     Quiz();
     ~Quiz();
-    vector<Movie> quizAlgo();
-    void q1Points(char choice);
-    void q2Points(char choice);
-    void q3Points(char choice);
-    void q4Points(char choice);
-    void q5Points(char choice);
+    vector<Movie> quizAlgo(vector<Movie> &);
+    void q1Points(vector<Movie> &, char choice);
+    void q2Points(vector<Movie> &, char choice);
+    void q3Points(vector<Movie> &, char choice);
+    void q4Points(vector<Movie> &, char choice);
+    void q5Points(vector<Movie> &, char choice);
   
  private:
-
+    
     Quiz operator=(const Output&) = delete;
     vector<unsigned> points;
 };
