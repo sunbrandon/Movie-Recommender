@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+#include <time.h>
+#include <cmath>
 
 using namespace std;
 
@@ -17,11 +19,50 @@ vector<unsigned> Search::getPoints() {  //if issues, check here
     return this->points;
 }
 
-vector<Movie> Search::simlarAlgo() {}
+vector<Movie> Search::simlarAlgo(vector<Movie> &sortedList) {
+    vector<Movie> similarRecommend;
+
+    unsigned count = 0;
+
+    unsigned max1 = 0;
+    unsigned max2 = 0;
+    unsigned max3 = 0;
+
+    unsigned index1 = 0;
+    unsigned index2 = 0;
+    unsigned index3 = 0;
+
+    for (unsigned i = 0; i < getPoints().size(); i++) {
+        if (getPoints().at(i) > max1) {
+            max3 = max2;
+            index3 = index2;
+            max2 = max1;
+            index2 = index1;
+            max1 = getPoints().at(i);
+            index1 = i;
+        }
+        else if (getPoints().at(i) > max2) {
+            max3 = max2;
+            index3 = index2;
+            max2 = getPoints().at(i);
+            index2 = i;
+        }
+        else if (getPoints().at(i) > max3) {
+            max3 = getPoints().at(i);
+            index3 = i;
+        }
+    }
+
+    similarRecommend.push_back(sortedList.at(index1));
+    similarRecommend.push_back(sortedList.at(index2));
+    similarRecommend.push_back(sortedList.at(index3));
+
+    return similarRecommend;
+}
 
 vector<Movie> Search::filterAlgo() {}
 
-void Search::searchSimilarPoints(string movieInput) {
+void Search::searchSimilarPoints(string movieInput, vector<Movie> &movies) {
     unsigned m = 1;
     for (unsigned i = 0; i < 100; i++) {    //locate the inputted movie
         if (movieInput == movies.at(i).getTitle()) {
