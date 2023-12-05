@@ -15,13 +15,13 @@ class Search : public Input, public Sort {
     ~Search();
     vector<unsigned> getPoints();
     vector<Movie> simlarAlgo();
-    vector<Movie> filterAlgo();
-    void searchSimilarPoints(string);
-    void genreFilterPoints();
-    void yearFilterPoints();
-    void durationFilterPoints();
-    void ratingFilterPoints();
-    void voteFilterPoints();
+    vector<Movie> filterAlgo(vector<Movie>&, vector<string>&);
+    void searchSimilarPoints(string, vector<Movie>&);
+    void genreFilterPoints(vector<Movie>&, vector<string>&);
+    void yearFilterPoints(vector<Movie>&, vector<string>&);
+    void durationFilterPoints(vector<Movie>&, vector<string>&);
+    void ratingFilterPoints(vector<Movie>&, vector<string>&);
+    void voteFilterPoints(vector<Movie>&, vector<string>&);
   
  private:
 
