@@ -92,7 +92,68 @@ vector<string> Input::getFilter() {
             genreInput != "11" & genreInput != "12" & genreInput != "13" & genreInput != "14" & genreInput != "15" & 
             genreInput != "16" & genreInput != "17" & genreInput != "18" & genreInput != "19" & genreInput != "20"); 
     
-    filterIn.push_back(genreInput);
+    if (genreInput == "1") {
+            genreInput = "Action";
+        }
+        else if (genreInput == "2") {
+            genreInput = "Adventure";
+        }
+        else if (genreInput == "3") {
+            genreInput = "Animation";
+        }
+        else if (genreInput == "4") {
+            genreInput = "Biography";
+        }
+        else if (genreInput == "5") {
+            genreInput = "Comedy";
+        }
+        else if (genreInput == "6") {
+            genreInput = "Crime";
+        }
+        else if (genreInput == "7") {
+            genreInput = "Drama";
+        }
+        else if (genreInput == "8") {
+            genreInput = "Family";
+        }
+        else if (genreInput == "9") {
+            genreInput = "Fantasy";
+        }
+        else if (genreInput == "10") {
+            genreInput = "Film-Noir";
+        }
+        else if (genreInput == "11") {
+            genreInput = "History";
+        }
+        else if (genreInput == "12") {
+            genreInput = "Horror";
+        }
+        else if (genreInput == "13") {
+            genreInput = "Music";
+        }
+        else if (genreInput == "14") {
+            genreInput = "Musical";
+        }
+        else if (genreInput == "15") {
+            genreInput = "Mystery";
+        }
+        else if (genreInput == "16") {
+            genreInput = "Romance";
+        }
+        else if (genreInput == "17") {
+            genreInput = "Sci-Fi";
+        }
+        else if (genreInput == "18") {
+            genreInput = "Thriller";
+        }
+        else if (genreInput == "19") {
+            genreInput = "War";
+        }
+        else if (genreInput == "20") {
+            genreInput = "Western";
+        }
+
+    this->filterIn.push_back(genreInput);
     
     filterOutYear();
     do {
@@ -100,7 +161,7 @@ vector<string> Input::getFilter() {
     }
     while (yearInput != "a" & yearInput != "b" & yearInput != "c" & yearInput != "d" & yearInput != "e");
 
-    filterIn.push_back(yearInput);
+    this->filterIn.push_back(yearInput);
 
     filterOutDuration();
     do {
@@ -108,7 +169,7 @@ vector<string> Input::getFilter() {
     }
     while (durationInput != "a" & durationInput != "b" & durationInput != "c" & durationInput != "d" & durationInput != "e" & durationInput != "f");
 
-    filterIn.push_back(durationInput);
+    this->filterIn.push_back(durationInput);
     
     filterOutRating();
     do {
@@ -116,7 +177,7 @@ vector<string> Input::getFilter() {
     }
     while (ratingInput != "a" & ratingInput != "b" & ratingInput != "c" & ratingInput != "d" & ratingInput != "e" & ratingInput != "f" & ratingInput != "g");
 
-    filterIn.push_back(ratingInput);
+    this->filterIn.push_back(ratingInput);
 
     filterOutPopularity();
     do {
@@ -124,7 +185,7 @@ vector<string> Input::getFilter() {
     }
     while (popularityInput != "a" & popularityInput != "b" & popularityInput != "c" & popularityInput != "d" & popularityInput != "e");
 
-    filterIn.push_back(popularityInput);
+    this->filterIn.push_back(popularityInput);
 
     return this->filterIn;
 }
@@ -143,35 +204,35 @@ vector<char> Input::getQuiz() {
         cin >> questionInput1;
     }
     while (questionInput1 != 'a' & questionInput1 != 'b' & questionInput1 != 'c' & questionInput1 != 'd');
-    quizInputs.at(0) = questionInput1;
+    quizInputs.push_back(questionInput1);
 
     questionOut2();
     do {
         cin >> questionInput2;
     }
     while (questionInput2 != 'a' & questionInput2 != 'b' & questionInput2 != 'c' & questionInput2 != 'd');
-    quizInputs.at(1) = questionInput2;
+    quizInputs.push_back(questionInput2);
 
     questionOut3();
     do {
         cin >> questionInput3;
     }
     while (questionInput3 != 'a' & questionInput3 != 'b' & questionInput3 != 'c' & questionInput3 != 'd');
-    quizInputs.at(2) = questionInput3;
+    quizInputs.push_back(questionInput3);
 
     questionOut4();
     do {
         cin >> questionInput4;
     }
     while (questionInput4 != 'a' & questionInput4 != 'b' & questionInput4 != 'c' & questionInput4 != 'd');
-    quizInputs.at(3) = questionInput4;
+    quizInputs.push_back(questionInput4);
 
     questionOut5();
     do {
         cin >> questionInput5;
     }
     while (questionInput5 != 'a' & questionInput5 != 'b' & questionInput5 != 'c' & questionInput5 != 'd');
-    quizInputs.at(4) = questionInput5;
+    quizInputs.push_back(questionInput5);
 
     return quizInputs;
 }

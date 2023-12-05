@@ -13,9 +13,9 @@ class Result : public Search, public Quiz, public Random {
     Result();
     ~Result();
     void quizResult();
-    void similarResult();
+    void similarResult(vector <Movie> movie);
     void filterResult();
-    void randomResult();
+    void randomResult(Movie movie);
   
  private:
 

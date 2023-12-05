@@ -12,7 +12,7 @@ class Random : public Input, public Sort {
 
     Random();
     ~Random();
-    Movie randomAlgo();
+    Movie randomAlgo(vector <Movie>& sortedList);
   
  private:
 
