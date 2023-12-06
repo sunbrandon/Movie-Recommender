@@ -12,7 +12,7 @@ class Result : public Search, public Quiz, public Random {
 
     Result();
     ~Result();
-    void quizResult();
+    void quizResult(vector <Movie>& movie);
     void similarResult(vector <Movie>& movie);
     void filterResult(vector <Movie>& movie, vector <string>& filters);
     void randomResult(Movie movie);
