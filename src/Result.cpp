@@ -10,8 +10,8 @@ Result::~Result() {}
 
 void Result::quizResult() {}
 
-void Result::similarResult(vector <Movie> movie) {
-    cout << "Here are three similar movies:" << endl;
+void Result::similarResult(vector <Movie>& movie) {
+    cout << "Recommendations based on movie:" << endl;
     for (int i = 0; i < 3; ++i){
         cout << "Movie title: " << movie.at(i).getTitle() << endl;
         cout << "Year of movie: " << movie.at(i).getYear() << endl;
