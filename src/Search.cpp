@@ -184,161 +184,99 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
 }
 
 void Search::genreFilterPoints(vector<Movie>& movies, vector<string>& filters) {
-    for (unsigned i = 0; i < 100; ++i){
-        //OPTIMIZE
-        // if (movies.at(i).getGenres().size() == 1) {}
-        // else {} for cases of 2 or 3 genres
-        // also put genres into a vector of strings and compare vector to vector with an additional for loop
-        
+    for (unsigned i = 0; i < 100; ++i) {        
         for (unsigned j = 0; j < movies.at(i).getGenres().size(); j++) {
-            if (movies.at(i).getGenres().at(j) == filters.at(0)){
+            if (movies.at(i).getGenres().at(j) == filters.at(0)) {
                 points.at(i) += 1;
             }
-            // else if (movies.at(i).getGenres().at(j) == "Adventure"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Animation"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Biography"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Comedy"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Crime"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Drama"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Family"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Fantasy"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Film-Noir"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "History"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Horror"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Music"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Musical"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Mystery"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Romance"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Sci-Fi"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Thriller"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "War"){
-            //     points.at(i) += 1;
-            // }
-            // else if (movies.at(i).getGenres().at(j) == "Western"){
-            //     points.at(i) += 1;
-            // }
         }
     }
 }
 
 void Search::yearFilterPoints(vector<Movie>& movies, vector<string>& filters) {
-    for (unsigned i = 0; i < 100; ++i){
-        if (filters.at(1) == "a" && movies.at(i).getYear() >= 1920 && movies.at(i).getYear() <= 1940){
+    for (unsigned i = 0; i < 100; ++i) {
+        if (filters.at(1) == "a" && movies.at(i).getYear() >= 1920 && movies.at(i).getYear() <= 1940) {
             points.at(i) += 1;
         }
-        else if (filters.at(1) == "b" && movies.at(i).getYear() >= 1941 && movies.at(i).getYear() <= 1960){
+        else if (filters.at(1) == "b" && movies.at(i).getYear() >= 1941 && movies.at(i).getYear() <= 1960) {
             points.at(i) += 1;
         }
-        else if (filters.at(1) == "c" && movies.at(i).getYear() >= 1961 && movies.at(i).getYear() <= 1980){
+        else if (filters.at(1) == "c" && movies.at(i).getYear() >= 1961 && movies.at(i).getYear() <= 1980) {
             points.at(i) += 1;
         }
-        else if (filters.at(1) == "d" && movies.at(i).getYear() >= 1981 && movies.at(i).getYear() <= 2000){
+        else if (filters.at(1) == "d" && movies.at(i).getYear() >= 1981 && movies.at(i).getYear() <= 2000) {
             points.at(i) += 1;
         }
-        else if (filters.at(1) == "e" && movies.at(i).getYear() >= 2001 && movies.at(i).getYear() <= 2020){
+        else if (filters.at(1) == "e" && movies.at(i).getYear() >= 2001 && movies.at(i).getYear() <= 2020) {
             points.at(i) += 1;
         }
     }
 }
 
 void Search::durationFilterPoints(vector<Movie>& movies, vector<string>& filters) {
-    for (unsigned i = 0; i < 100; ++i){
-        if (filters.at(2) == "a" && movies.at(i).getDuration() >= 60 && movies.at(i).getYear() <= 90){
+    for (unsigned i = 0; i < 100; ++i) {
+        if (filters.at(2) == "a" && movies.at(i).getDuration() >= 60 && movies.at(i).getYear() <= 90) {
             points.at(i) += 1;
         }
-        else if (filters.at(2) == "b" && movies.at(i).getDuration() >= 91 && movies.at(i).getYear() <= 120){
+        else if (filters.at(2) == "b" && movies.at(i).getDuration() >= 91 && movies.at(i).getYear() <= 120) {
             points.at(i) += 1;
         }       
-        else if (filters.at(2) == "c" && movies.at(i).getDuration() >= 121 && movies.at(i).getYear() <= 150){
+        else if (filters.at(2) == "c" && movies.at(i).getDuration() >= 121 && movies.at(i).getYear() <= 150) {
             points.at(i) += 1;
         }
-        else if (filters.at(2) == "d" && movies.at(i).getDuration() >= 151 && movies.at(i).getYear() <= 180){
+        else if (filters.at(2) == "d" && movies.at(i).getDuration() >= 151 && movies.at(i).getYear() <= 180) {
             points.at(i) += 1;
         }
-        else if (filters.at(2) == "e" && movies.at(i).getDuration() >= 181 && movies.at(i).getYear() <= 210){
+        else if (filters.at(2) == "e" && movies.at(i).getDuration() >= 181 && movies.at(i).getYear() <= 210) {
             points.at(i) += 1;
         }
-        else if (filters.at(2) == "f" && movies.at(i).getDuration() >= 211 && movies.at(i).getYear() <= 240){
+        else if (filters.at(2) == "f" && movies.at(i).getDuration() >= 211 && movies.at(i).getYear() <= 240) {
             points.at(i) += 1;
         }
     }
 }
 
 void Search::ratingFilterPoints(vector<Movie>& movies, vector<string>& filters) {
-    for (unsigned i = 0; i < 100; ++i){
-        if (filters.at(3) == "a" && movies.at(i).getRating() > 0 && movies.at(i).getRating() <= 8.3){
+    for (unsigned i = 0; i < 100; ++i) {
+        if (filters.at(3) == "a" && movies.at(i).getRating() > 0 && movies.at(i).getRating() <= 8.3) {
             points.at(i) += 1;
         }
-        else if (filters.at(3) == "b" && movies.at(i).getRating() == 8.4){
+        else if (filters.at(3) == "b" && movies.at(i).getRating() == 8.4) {
             points.at(i) += 1;
         }
-        else if (filters.at(3) == "c" && movies.at(i).getRating() == 8.5){
+        else if (filters.at(3) == "c" && movies.at(i).getRating() == 8.5) {
             points.at(i) += 1;
         }
-        else if (filters.at(3) == "d" && movies.at(i).getRating() == 8.6){
+        else if (filters.at(3) == "d" && movies.at(i).getRating() == 8.6) {
             points.at(i) += 1;
         }
-        else if (filters.at(3) == "e" && movies.at(i).getRating() == 8.7){
+        else if (filters.at(3) == "e" && movies.at(i).getRating() == 8.7) {
             points.at(i) += 1;
         }
-        else if (filters.at(3) == "f" && movies.at(i).getRating() == 8.8){
+        else if (filters.at(3) == "f" && movies.at(i).getRating() == 8.8) {
             points.at(i) += 1;
         }
-        else if (filters.at(3) == "g" && movies.at(i).getRating() >= 8.9){
+        else if (filters.at(3) == "g" && movies.at(i).getRating() >= 8.9) {
             points.at(i) += 1;
         }
     }
 }
 
 void Search::voteFilterPoints(vector<Movie>& movies, vector<string>& filters) {
-    for (unsigned i = 0; i < 100; ++i){
-        if (filters.at(4) == "a" && movies.at(i).getNumOfVotes() >= 50000 && movies.at(i).getNumOfVotes() <= 500000){
+    for (unsigned i = 0; i < 100; ++i) {
+        if (filters.at(4) == "a" && movies.at(i).getNumOfVotes() >= 50000 && movies.at(i).getNumOfVotes() <= 500000) {
             points.at(i) += 1;
         }
-        else if (filters.at(4) == "b" && movies.at(i).getNumOfVotes() >= 500001 && movies.at(i).getNumOfVotes() <= 1000000){
+        else if (filters.at(4) == "b" && movies.at(i).getNumOfVotes() >= 500001 && movies.at(i).getNumOfVotes() <= 1000000) {
             points.at(i) += 1;
         }
-        else if (filters.at(4) == "c" && movies.at(i).getNumOfVotes() >= 1000001 && movies.at(i).getNumOfVotes() <= 1500000){
+        else if (filters.at(4) == "c" && movies.at(i).getNumOfVotes() >= 1000001 && movies.at(i).getNumOfVotes() <= 1500000) {
             points.at(i) += 1;
         }
-        else if (filters.at(4) == "c" && movies.at(i).getNumOfVotes() >= 1500001 && movies.at(i).getNumOfVotes() <= 2000000){
+        else if (filters.at(4) == "c" && movies.at(i).getNumOfVotes() >= 1500001 && movies.at(i).getNumOfVotes() <= 2000000) {
             points.at(i) += 1;
         }
-        else if (filters.at(4) == "e" && movies.at(i).getNumOfVotes() >= 2000001 && movies.at(i).getNumOfVotes() <= 2500000){
+        else if (filters.at(4) == "e" && movies.at(i).getNumOfVotes() >= 2000001 && movies.at(i).getNumOfVotes() <= 2500000) {
             points.at(i) += 1;
         }
     }
