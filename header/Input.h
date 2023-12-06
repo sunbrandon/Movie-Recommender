@@ -2,20 +2,19 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
-#include "Output.h"
+#include "Result.h"
 
 using namespace std;
 
-class Input : public Output {
+class Input : public Result {
  public:
 
   Input();
   ~Input();
-  void getMenu();
+  void getMenu(vector<Movie>&);
   char getSearch();
   string getSimilar();
   vector<string> getFilter();
-  vector<char> getQuiz();
   
  private:
 

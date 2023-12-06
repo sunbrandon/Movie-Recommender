@@ -63,8 +63,8 @@ void Result::quizResult(vector <Movie>& movie) {
     }
 }
 
-void Result::similarResult(vector <Movie>& movie) {
-    vector<Movie> similarMovies = similarAlgo(movie);
+void Result::similarResult(vector <Movie>& movie, string similarTitle) {
+    vector<Movie> similarMovies = similarAlgo(movie, similarTitle);
     cout << "Recommendations based on movie:" << endl;
     for (int i = 0; i < 3; ++i){
         cout << "Movie title: " << similarMovies.at(i).getTitle() << endl;
