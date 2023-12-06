@@ -11,25 +11,26 @@ Result::~Result() {}
 void Result::quizResult() {}
 
 void Result::similarResult(vector <Movie>& movie) {
+    vector<Movie> similarMovies = similarAlgo(movie);
     cout << "Recommendations based on movie:" << endl;
     for (int i = 0; i < 3; ++i){
-        cout << "Movie title: " << movie.at(i).getTitle() << endl;
-        cout << "Year of movie: " << movie.at(i).getYear() << endl;
+        cout << "Movie title: " << similarMovies.at(i).getTitle() << endl;
+        cout << "Year of movie: " << similarMovies.at(i).getYear() << endl;
         cout << "Movie genre(s): ";
-        int commaGenreNum = movie.at(i).getGenres().size() - 1;
-        for (int j = 0; j < movie.at(i).getGenres().size(); ++j){
-            cout << movie.at(i).getGenres().at(j);
+        int commaGenreNum = similarMovies.at(i).getGenres().size() - 1;
+        for (int j = 0; j < similarMovies.at(i).getGenres().size(); ++j){
+            cout << similarMovies.at(i).getGenres().at(j);
             if (commaGenreNum > 0){
                 cout << ", ";
                 commaGenreNum--;
             }
         }
         cout << endl;
-        cout << "Duration of movie: " << movie.at(i).getDuration() << endl;
+        cout << "Duration of movie: " << similarMovies.at(i).getDuration() << endl;
         cout << "Movie director(s): ";
-        int commaDirectorNum = movie.at(i).getDirectors().size() - 1;
-        for (int j = 0; j < movie.at(i).getDirectors().size(); ++j){
-            cout << movie.at(i).getDirectors().at(j);
+        int commaDirectorNum = similarMovies.at(i).getDirectors().size() - 1;
+        for (int j = 0; j < similarMovies.at(i).getDirectors().size(); ++j){
+            cout << similarMovies.at(i).getDirectors().at(j);
             if (commaDirectorNum > 0){
                 cout << ", ";
                 commaDirectorNum--;
@@ -37,28 +38,29 @@ void Result::similarResult(vector <Movie>& movie) {
         }
         cout << endl;
         cout << "Movie writer(s): ";
-        int commaWriterNum = movie.at(i).getWriters().size() - 1;
-        for (int j = 0; j < movie.at(i).getWriters().size(); ++j){
-            cout << movie.at(i).getWriters().at(j);
+        int commaWriterNum = similarMovies.at(i).getWriters().size() - 1;
+        for (int j = 0; j < similarMovies.at(i).getWriters().size(); ++j){
+            cout << similarMovies.at(i).getWriters().at(j);
             if (commaWriterNum > 0){
                 cout << ", ";
                 commaWriterNum--;
             }
         }
         cout << endl;
-        cout << "Producer: " << movie.at(i).getProduction() << endl;
-        int commaActorNum = movie.at(i).getActors().size() - 1;
-        for (int j = 0; j < movie.at(i).getActors().size(); ++j){
-            cout << movie.at(i).getActors().at(j);
+        cout << "Producer: " << similarMovies.at(i).getProduction() << endl;
+        int commaActorNum = similarMovies.at(i).getActors().size() - 1;
+        for (int j = 0; j < similarMovies.at(i).getActors().size(); ++j){
+            cout << similarMovies.at(i).getActors().at(j);
             if (commaActorNum > 0){
                 cout << ", ";
                 commaActorNum--;
             }
         }
         cout << endl;
-        cout << "Movie description: " << movie.at(i).getDescriptions().at(0) << endl;
-        cout << "Rating: " << movie.at(i).getRating() << endl;
-        cout << "Votes: " << movie.at(i).getNumOfVotes() << endl;
+        cout << "Movie description: " << similarMovies.at(i).getDescriptions().at(0) << endl;
+        cout << "Rating: " << similarMovies.at(i).getRating() << endl;
+        cout << "Votes: " << similarMovies.at(i).getNumOfVotes() << endl;
+        cout << endl;
     }
 }
 
