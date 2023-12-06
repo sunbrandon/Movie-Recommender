@@ -10,15 +10,15 @@ using namespace std;
 class Result : public Search, public Quiz, public Random {
  public:
 
-    Result();
-    ~Result();
-    void quizResult(vector <Movie>& movie);
-    void similarResult(vector <Movie>& movie);
-    void filterResult(vector <Movie>& movie, vector <string>& filters);
-    void randomResult(Movie movie);
+   Result();
+   ~Result();
+   void quizResult(vector <Movie>& movie);
+   void similarResult(vector <Movie>& movie);
+   void filterResult(vector <Movie>& movie, vector <string>& filters);
+   void randomResult(Movie movie);
   
  private:
 
-    Result operator=(const Result&) = delete;
+   Result operator=(const Result&) = delete;
 
 };

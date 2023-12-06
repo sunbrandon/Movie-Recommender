@@ -41,7 +41,7 @@ int main() {
     //     cout << movieVector.at(i).getTitle() << endl;
     // }
 
-    // Input* in = new Input();
+    Input* in = new Input();
     // vector<string> fin = in->getFilter();
 
     cout << endl;
@@ -55,10 +55,12 @@ int main() {
     // cout << filterVector.at(1).getTitle() << endl;
     // cout << filterVector.at(2).getTitle() << endl;
     
-    Result* r = new Result();
-    r->quizResult(movieVector);
+    // Result* r = new Result();
+    in->getMenu();
+    // r->quizResult(movieVector);
 
     // cout << filterVector.size() << endl;
-
+    delete s;
+    delete in;
     return 0;
 }

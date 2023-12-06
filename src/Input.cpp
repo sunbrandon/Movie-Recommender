@@ -1,5 +1,9 @@
 #include "../header/Input.h"
 #include "../header/Output.h"
+#include "../header/Random.h"
+#include "../header/Movie.h"
+#include "../header/Result.h"
+#include "../header/Sort.h"
 #include <iostream>
 #include <cstdlib>
 #include <vector>
@@ -17,26 +21,32 @@ Input::~Input() {}
 void Input::getMenu() {
     char input;
     outputMenu();
-        
-    cin >> input;
-    while(input != '1' || input != '2' || input != '3' || input != 'q') {
-        cout << "Invalid input, please try again." << endl;
+
+    do {
         cin >> input;
-    }
+        while (input != '1' & input != '2' & input != '3' & input != 'q') {
+            cout << "Invalid input, please try again." << endl;
+            cin >> input;
+        }
 
-    if (input == '1') {
-        cout << "IMPLEMENT: getSearch();" << endl;
+        if (input == '1') {
+            getSearch();
+        }
+        else if (input == '2') {
+            getQuiz();
+        }
+        else if (input == '3') {
+            Random *r = new Random();
+            Result *res = new Result();
+            Sort *s = new Sort();
+            vector<Movie> sortedList = s->sortCSV();
+            res->randomResult(r->randomAlgo(sortedList));
+            delete r;
+            delete res;
+            delete s;
+        }
     }
-    else if (input == '2') {
-        cout << "IMPLEMENT: getQuiz();" << endl;
-    }
-    else if (input == '3') {
-        cout << "IMPLEMENT: RANDOM" << endl;
-    }
-    else if (input == 'q') {
-        cout << "IMPLEMENT: EXIT" << endl;
-    }
-
+    while (input != 'q');
 }
 
 char Input::getSearch() {
