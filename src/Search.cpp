@@ -26,6 +26,32 @@ vector<Movie> Search::similarAlgo(vector<Movie> &sortedList) {
 
     string similarTitle = getSimilar();
 
+    bool movieFound = false;
+
+    do {
+        for (int i = 0; i < similarTitle.size(); i++) {
+                similarTitle.at(i) = toupper(similarTitle.at(i));
+        }
+
+        for (unsigned int i = 0; i < sortedList.size(); i++) {
+            string movieName = sortedList.at(i).getTitle();
+
+            for (int i = 0; i < movieName.size(); i++) {
+                movieName.at(i) = toupper(movieName.at(i));
+            }
+
+            if (movieName == similarTitle) {
+                movieFound = true;
+            }
+        }
+        
+        if (movieFound == false) {
+            cout << "The movie entered is not in the database.  Please try again." << endl;
+            cout << endl;
+            getline(cin, similarTitle);
+        }
+    } while (movieFound == false);
+
     searchSimilarPoints(similarTitle, sortedList);
 
     unsigned count = 0;
