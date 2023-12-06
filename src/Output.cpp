@@ -31,7 +31,7 @@ void Output::questionOut1() {
 }
 
 void Output::questionOut2() {
-    cout << "Question 2: What is the occassion?" << endl;
+    cout << "Question 2: What is the occasion?" << endl;
     cout << endl;
     cout << "a. Movie Date" << endl;
     cout << "b. By yourself" << endl;
