@@ -48,8 +48,6 @@ class Movie {
    vector<string> getActors() const;
    vector<string> getDescriptions() const;
 
-   
-  
  private:
 
    int year;

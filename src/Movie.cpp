@@ -6,7 +6,15 @@
 
 using namespace std;
 
-Movie::Movie() {}
+Movie::Movie() {
+    year = 0;
+    numOfVotes = 0;
+    duration = 0;
+    rating = 0.0;
+    title = "";
+    production = "";
+    movieID = "";
+}
 
 Movie::Movie(string movieID, string title, int year, vector<string> genres, int duration, vector<string> directors, vector<string> writers, string production, vector<string> actors, vector<string> descriptions, double rating, int numOfVotes) {
     this->movieID = movieID;

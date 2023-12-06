@@ -23,6 +23,6 @@ class Input : public Output {
    string similarIn;
    vector<string> filterIn;
    vector<char> questionIn;
-   Input operator=(const Output&) = delete;
-
+   Input operator=(const Input&) = delete;
+   
 };

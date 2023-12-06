@@ -19,6 +19,6 @@ class Sort : public Movie {
     vector<string> genres;
     double rating;
     int numOfVotes;
-    Movie operator=(const ostream&) = delete;
+    Sort operator=(const Sort&) = delete;
 
 };

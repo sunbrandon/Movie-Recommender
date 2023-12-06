@@ -23,6 +23,6 @@ class Quiz : public Input, public Sort {
   
  private:
     
-    Quiz operator=(const Output&) = delete;
+    Quiz operator=(const Quiz&) = delete;
     vector<unsigned> points;
 };
