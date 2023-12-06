@@ -11,22 +11,22 @@ using namespace std;
 class Search : public Input, public Sort {
  public:
 
-    Search();
-    ~Search();
-    vector<unsigned> getPoints();
+   Search();
+   ~Search();
+   vector<unsigned> getPoints();
 
-    vector<Movie> similarAlgo(vector<Movie>&);
-    vector<Movie> filterAlgo(vector<Movie>&, vector<string>&);
-    void searchSimilarPoints(string, vector<Movie>&);
-    void genreFilterPoints(vector<Movie>&, vector<string>&);
-    void yearFilterPoints(vector<Movie>&, vector<string>&);
-    void durationFilterPoints(vector<Movie>&, vector<string>&);
-    void ratingFilterPoints(vector<Movie>&, vector<string>&);
-    void voteFilterPoints(vector<Movie>&, vector<string>&);
+   vector<Movie> similarAlgo(vector<Movie>&);
+   vector<Movie> filterAlgo(vector<Movie>&, vector<string>&);
+   void searchSimilarPoints(string, vector<Movie>&);
+   void genreFilterPoints(vector<Movie>&, vector<string>&);
+   void yearFilterPoints(vector<Movie>&, vector<string>&);
+   void durationFilterPoints(vector<Movie>&, vector<string>&);
+   void ratingFilterPoints(vector<Movie>&, vector<string>&);
+   void voteFilterPoints(vector<Movie>&, vector<string>&);
   
  private:
 
-    Search operator=(const Search&) = delete;
-    vector<unsigned> points;
+   Search operator=(const Search&) = delete;
+   vector<unsigned> points;
 
 };
