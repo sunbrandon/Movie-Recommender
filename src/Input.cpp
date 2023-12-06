@@ -63,7 +63,7 @@ string Input::getSimilar() {
 
     unsigned int stringLength = this->similarIn.length();
 
-    cin >> this->similarIn;
+    getline(cin, this->similarIn);
 
     for (int i = 0; i < stringLength; i++) {
         this->similarIn.at(i) = toupper(this->similarIn.at(i));
