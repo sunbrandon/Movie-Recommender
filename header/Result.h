@@ -19,6 +19,6 @@ class Result : public Search, public Quiz, public Random {
   
  private:
 
-    Result operator=(const Output&) = delete;
+    Result operator=(const Result&) = delete;
 
 };

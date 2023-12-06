@@ -7,7 +7,10 @@
 
 using namespace std;
 
-Input::Input() {}
+Input::Input() {
+    choice = '\0';
+    similarIn = "";
+}
 
 Input::~Input() {}
 

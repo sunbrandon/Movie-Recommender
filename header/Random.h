@@ -16,6 +16,6 @@ class Random : public Input, public Sort {
   
  private:
 
-    Random operator=(const Output&) = delete;
+    Random operator=(const Random&) = delete;
 
 };

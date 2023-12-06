@@ -9,7 +9,12 @@
 
 using namespace std;
 
-Sort::Sort() {}
+Sort::Sort() {
+    title = "";
+    year = 0;
+    rating = 0.0;
+    numOfVotes = 0;
+}
 
 Sort::~Sort() {}
 

@@ -26,7 +26,7 @@ class Search : public Input, public Sort {
   
  private:
 
-    Search operator=(const Output&) = delete;
+    Search operator=(const Search&) = delete;
     vector<unsigned> points;
 
 };
