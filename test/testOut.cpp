@@ -3,9 +3,13 @@
 #include <vector>
 #include <string>
 #include "../header/Input.h"
-#include "../header/Sort.h"
 #include "../header/Movie.h"
+#include "../header/Output.h"
+#include "../header/Quiz.h"
+#include "../header/Random.h"
+#include "../header/Result.h"
 #include "../header/Search.h"
+#include "../header/Sort.h"
 
 using namespace std;
 
@@ -43,13 +47,18 @@ int main() {
     cout << endl;
 
     //cout << movieVector.size() << endl;
-    Search* ts = new Search();
-    vector<Movie> filterVector;
-    filterVector = ts->similarAlgo(movieVector);
+    // Search* ts = new Search();
+    // vector<Movie> filterVector;
+    // filterVector = ts->filterAlgo(movieVector, fin);
 
-    cout << filterVector.at(0).getTitle() << endl;
-    cout << filterVector.at(1).getTitle() << endl;
-    cout << filterVector.at(2).getTitle() << endl;
+    // cout << filterVector.at(0).getTitle() << endl;
+    // cout << filterVector.at(1).getTitle() << endl;
+    // cout << filterVector.at(2).getTitle() << endl;
     
+    Result* r = new Result();
+    r->similarResult(movieVector);
+
+    // cout << filterVector.size() << endl;
+
     return 0;
 }
