@@ -56,7 +56,7 @@ int main() {
     // cout << filterVector.at(2).getTitle() << endl;
     
     // Result* r = new Result();
-    in->getMenu();
+    in->getMenu(movieVector);
     // r->quizResult(movieVector);
 
     // cout << filterVector.size() << endl;
