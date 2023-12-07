@@ -22,7 +22,7 @@ Input::Input() {
 Input::~Input() {}
 
 void Input::getMenu(vector<Movie>& sortedList) {
-    char input;
+    string input;
   
     cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
     cout << endl;
@@ -31,52 +31,50 @@ void Input::getMenu(vector<Movie>& sortedList) {
 
     do {
         cin >> input;
-        while (input != '1' & input != '2' & input != '3' & input != 'q') {
+        while (input != "1" & input != "2" & input != "3" & input != "q") {
             cout << "Invalid input, please try again." << endl;
             cin >> input;
         }
-        if (input == '1') {
+        if (input == "1") {
             getSearch(sortedList);
           
             cout << endl;
             outputMenu();
         }
-        else if (input == '2') {
-            res->quizResult(sortedList);
+        else if (input == "2") {
+            quizResult(sortedList);
 
             cout << endl;
             outputMenu();
         }
-        else if (input == '3') {
+        else if (input == "3") {
             randomResult(randomAlgo(sortedList));
         }
     }
-    while (input != 'q');
-
-    delete r;
-    delete res;
-    delete s;
-    delete q;
+    while (input != "q");
 }
 
 void Input::getSearch(vector<Movie>& sortedList) {
-    char input;
+    string input;
+
+    cout << endl;
+
     searchChoiceOut();
 
     do {
         cin >> input;
         cout << endl;
-    } while (input != 'a' & input != 'b' & input != 'c');
+    } while (input != "a" & input != "b" & input != "c");
 
-    if (input == 'a') {
+    if (input == "a") {
         cin.ignore();
         similarResult(sortedList, getSimilar());
     }
-    else if (input == 'b') {
+    else if (input == "b") {
         getFilter();
         filterResult(sortedList, this->filterIn);
     }
-    else if (input == 'c') {
+    else if (input == "c") {
         cout << "Returning to menu..." << endl;
     }
 }
