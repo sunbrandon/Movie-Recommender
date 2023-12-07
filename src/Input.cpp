@@ -23,7 +23,7 @@ Input::~Input() {}
 
 void Input::getMenu(vector<Movie>& sortedList) {
     char input;
-
+  
     cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
     cout << endl;
 
@@ -37,17 +37,26 @@ void Input::getMenu(vector<Movie>& sortedList) {
         }
         if (input == '1') {
             getSearch(sortedList);
+          
             cout << endl;
             outputMenu();
         }
         else if (input == '2') {
-            getQuiz();
+            res->quizResult(sortedList);
+
+            cout << endl;
+            outputMenu();
         }
         else if (input == '3') {
             randomResult(randomAlgo(sortedList));
         }
     }
     while (input != 'q');
+
+    delete r;
+    delete res;
+    delete s;
+    delete q;
 }
 
 void Input::getSearch(vector<Movie>& sortedList) {

@@ -26,6 +26,6 @@ int main() {
 
     delete s;
     delete in;
-    
+
     return 0;
 }
