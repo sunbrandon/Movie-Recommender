@@ -56,11 +56,15 @@ int main() {
     // cout << filterVector.at(2).getTitle() << endl;
     
     // Result* r = new Result();
-    in->getMenu(movieVector);
+    //in->getMenu(movieVector);
     // r->quizResult(movieVector);
+
+    Result *res = new Result();
+    res->similarResult(sor)
 
     // cout << filterVector.size() << endl;
     delete s;
     delete in;
+
     return 0;
 }

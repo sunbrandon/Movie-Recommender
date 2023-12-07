@@ -9,8 +9,6 @@ Output::Output() {}
 Output::~Output() {}
 
 void Output::outputMenu() {
-    cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
-    cout << endl;
     cout << "Please select your option from the list." << endl;
     cout << endl;
     cout << "1. Search" << endl;

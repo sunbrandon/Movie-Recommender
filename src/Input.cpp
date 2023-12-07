@@ -20,6 +20,15 @@ Input::~Input() {}
 
 void Input::getMenu(vector<Movie>& sortedList) {
     char input;
+
+    Random *r = new Random();
+    Result *res = new Result();
+    Sort *s = new Sort();
+    Quiz *q = new Quiz();
+
+    cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
+    cout << endl;
+
     outputMenu();
 
     do {
@@ -33,20 +42,24 @@ void Input::getMenu(vector<Movie>& sortedList) {
             getSearch();
         }
         else if (input == '2') {
-            getQuiz();
+            res->quizResult(sortedList);
+
+            cout << endl;
+            outputMenu();
         }
         else if (input == '3') {
-            Random *r = new Random();
-            Result *res = new Result();
-            Sort *s = new Sort();
-            vector<Movie> sortedList = s->sortCSV();
             res->randomResult(r->randomAlgo(sortedList));
-            delete r;
-            delete res;
-            delete s;
+
+            cout << endl;
+            outputMenu();
         }
     }
     while (input != 'q');
+
+    delete r;
+    delete res;
+    delete s;
+    delete q;
 }
 
 char Input::getSearch() {
