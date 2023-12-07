@@ -164,7 +164,7 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
             for (unsigned k = 0; k < movies.at(m).getGenres().size(); k++) {  //compared to size of getGenres() vector for movieInput
                 if (movies.at(m).getGenres().at(k) == movies.at(i).getGenres().at(j)) { //comparing genres case-by-case
                     if (movies.at(i).getTitle() != movieInput) {
-                        points.at(i) += 3;
+                        points.at(i) += 5;
                     }
                 }
             }
@@ -221,7 +221,7 @@ void Search::genreFilterPoints(vector<Movie>& movies, vector<string>& filters) {
     for (unsigned i = 0; i < 100; ++i) {        
         for (unsigned j = 0; j < movies.at(i).getGenres().size(); j++) {
             if (movies.at(i).getGenres().at(j) == filters.at(0)) {
-                points.at(i) += 1;
+                points.at(i) += 10;
             }
         }
     }
