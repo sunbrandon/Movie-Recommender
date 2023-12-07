@@ -23,7 +23,8 @@ Input::~Input() {}
 
 void Input::getMenu(vector<Movie>& sortedList) {
     string input;
-  
+
+    cout << endl;
     cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
     cout << endl;
 
@@ -58,7 +59,7 @@ void Input::getMenu(vector<Movie>& sortedList) {
 }
 
 void Input::getSearch(vector<Movie>& sortedList) {
-    string input;
+    string input = "";
 
     cout << endl;
 
@@ -67,6 +68,12 @@ void Input::getSearch(vector<Movie>& sortedList) {
     do {
         cin >> input;
         cout << endl;
+        while (input != "a" & input != "b" & input != "c") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> input;
+            cout << endl;
+        }
     } while (input != "a" & input != "b" & input != "c");
 
     if (input == "a") {
