@@ -49,6 +49,9 @@ void Input::getMenu(vector<Movie>& sortedList) {
         }
         else if (input == "3") {
             randomResult(randomAlgo(sortedList));
+            
+            cout << endl;
+            outputMenu();
         }
     }
     while (input != "q");

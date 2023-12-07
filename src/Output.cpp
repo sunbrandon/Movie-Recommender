@@ -19,6 +19,7 @@ void Output::outputMenu() {
 }
 
 void Output::questionOut1() {
+    cout << endl;
     cout << "Question 1: How are you feeling today?" << endl;
     cout << endl;
     cout << "a. Gloomy" << endl;
@@ -29,6 +30,7 @@ void Output::questionOut1() {
 }
 
 void Output::questionOut2() {
+    cout << endl;
     cout << "Question 2: What is the occasion?" << endl;
     cout << endl;
     cout << "a. Movie Date" << endl;
@@ -39,6 +41,7 @@ void Output::questionOut2() {
 }
 
 void Output::questionOut3() {
+    cout << endl;
     cout << "Question 3: If you had to switch careers today, which would you choose?" << endl;
     cout << endl;
     cout << "a. Computer Hacker" << endl;
@@ -49,6 +52,7 @@ void Output::questionOut3() {
 }
 
 void Output::questionOut4() {
+    cout << endl;
     cout << "Question 4: What goes through your mind during a good movie?" << endl;
     cout << endl;
     cout << "a. Nothing...I'm too busy laughing" << endl;
@@ -59,6 +63,7 @@ void Output::questionOut4() {
 }
 
 void Output::questionOut5() {
+    cout << endl;
     cout << "Question 5: Which option best describes the type of movie you want?" << endl;
     cout << endl;
     cout << "a. A movie I haven't heard much about" << endl;
@@ -114,6 +119,7 @@ void Output::filterOutGenre() {
 
 void Output::filterOutYear(){
 
+    cout << endl;
     cout << "Select a decade: " << endl;
     cout << endl;
     cout << "a. 1920 - 1940" << endl;
@@ -127,6 +133,7 @@ void Output::filterOutYear(){
 
 void Output::filterOutDuration(){
 
+    cout << endl;
     cout << "Select the length of the movie (minutes): " << endl;
     cout << endl;
     cout << "a. 60 - 90" << endl;
@@ -141,6 +148,7 @@ void Output::filterOutDuration(){
 
 void Output::filterOutRating(){
 
+    cout << endl;
     cout << "Select the rating of the movie: " << endl;
     cout << endl;
     cout << "a. 0 - 8.3" << endl;
@@ -156,6 +164,7 @@ void Output::filterOutRating(){
 
 void Output::filterOutPopularity(){
 
+    cout << endl;
     cout << "Select the popularity of the movie: " << endl;
     cout << endl;
     cout << "a. 50,000 - 500,000" << endl;
