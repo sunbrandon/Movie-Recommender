@@ -14,12 +14,19 @@ using namespace std;
 Input::Input() {
     choice = '\0';
     similarIn = "";
+    for (unsigned i = 0; i < 5; ++i) {
+        this->filterIn.push_back("");
+    }
 }
 
 Input::~Input() {}
 
 void Input::getMenu(vector<Movie>& sortedList) {
     char input;
+
+    cout << "WELCOME TO THE MOVIE RECOMMENDER!" << endl;
+    cout << endl;
+
     outputMenu();
 
     do {
@@ -28,28 +35,22 @@ void Input::getMenu(vector<Movie>& sortedList) {
             cout << "Invalid input, please try again." << endl;
             cin >> input;
         }
-
         if (input == '1') {
-            getSearch();
+            getSearch(sortedList);
+            cout << endl;
+            outputMenu();
         }
         else if (input == '2') {
             getQuiz();
         }
         else if (input == '3') {
-            Random *r = new Random();
-            Result *res = new Result();
-            Sort *s = new Sort();
-            vector<Movie> sortedList = s->sortCSV();
-            res->randomResult(r->randomAlgo(sortedList));
-            delete r;
-            delete res;
-            delete s;
+            randomResult(randomAlgo(sortedList));
         }
     }
     while (input != 'q');
 }
 
-char Input::getSearch() {
+void Input::getSearch(vector<Movie>& sortedList) {
     char input;
     searchChoiceOut();
 
@@ -59,30 +60,33 @@ char Input::getSearch() {
     } while (input != 'a' & input != 'b' & input != 'c');
 
     if (input == 'a') {
-        cout << "Implement similar search option" << endl;
+        cin.ignore();
+        similarResult(sortedList, getSimilar());
     }
     else if (input == 'b') {
-        cout << "Implement filter search option" << endl;
+        getFilter();
+        filterResult(sortedList, this->filterIn);
     }
     else if (input == 'c') {
-        cout << "Implement return to menu option" << endl;
+        cout << "Returning to menu..." << endl;
     }
-
-    return input;
 }
 
 string Input::getSimilar() {
     similarOut();
 
     unsigned int stringLength = this->similarIn.length();
-
+    
     getline(cin, this->similarIn);
 
     for (int i = 0; i < stringLength; i++) {
         this->similarIn.at(i) = toupper(this->similarIn.at(i));
     }
 
-    return similarIn;
+    string similar = this->similarIn;
+    this->similarIn = "";
+
+    return similar;
 }
 
 vector<string> Input::getFilter() {
@@ -102,67 +106,67 @@ vector<string> Input::getFilter() {
             genreInput != "16" & genreInput != "17" & genreInput != "18" & genreInput != "19" & genreInput != "20"); 
     
     if (genreInput == "1") {
-            genreInput = "Action";
-        }
-        else if (genreInput == "2") {
-            genreInput = "Adventure";
-        }
-        else if (genreInput == "3") {
-            genreInput = "Animation";
-        }
-        else if (genreInput == "4") {
-            genreInput = "Biography";
-        }
-        else if (genreInput == "5") {
-            genreInput = "Comedy";
-        }
-        else if (genreInput == "6") {
-            genreInput = "Crime";
-        }
-        else if (genreInput == "7") {
-            genreInput = "Drama";
-        }
-        else if (genreInput == "8") {
-            genreInput = "Family";
-        }
-        else if (genreInput == "9") {
-            genreInput = "Fantasy";
-        }
-        else if (genreInput == "10") {
-            genreInput = "Film-Noir";
-        }
-        else if (genreInput == "11") {
-            genreInput = "History";
-        }
-        else if (genreInput == "12") {
-            genreInput = "Horror";
-        }
-        else if (genreInput == "13") {
-            genreInput = "Music";
-        }
-        else if (genreInput == "14") {
-            genreInput = "Musical";
-        }
-        else if (genreInput == "15") {
-            genreInput = "Mystery";
-        }
-        else if (genreInput == "16") {
-            genreInput = "Romance";
-        }
-        else if (genreInput == "17") {
-            genreInput = "Sci-Fi";
-        }
-        else if (genreInput == "18") {
-            genreInput = "Thriller";
-        }
-        else if (genreInput == "19") {
-            genreInput = "War";
-        }
-        else if (genreInput == "20") {
-            genreInput = "Western";
-        }
+        genreInput = "Action";
+    }
+    else if (genreInput == "2") {
+        genreInput = "Adventure";
+    }
+    else if (genreInput == "3") {
+        genreInput = "Animation";
+    }
+    else if (genreInput == "4") {
+        genreInput = "Biography";
+    }
+    else if (genreInput == "5") {
+        genreInput = "Comedy";
+    }
+    else if (genreInput == "6") {
+        genreInput = "Crime";
+    }
+    else if (genreInput == "7") {
+        genreInput = "Drama";
+    }
+    else if (genreInput == "8") {
+        genreInput = "Family";
+    }
+    else if (genreInput == "9") {
+        genreInput = "Fantasy";
+    }
+    else if (genreInput == "10") {
+        genreInput = "Film-Noir";
+    }
+    else if (genreInput == "11") {
+        genreInput = "History";
+    }
+    else if (genreInput == "12") {
+        genreInput = "Horror";
+    }
+    else if (genreInput == "13") {
+        genreInput = "Music";
+    }
+    else if (genreInput == "14") {
+        genreInput = "Musical";
+    }
+    else if (genreInput == "15") {
+        genreInput = "Mystery";
+    }
+    else if (genreInput == "16") {
+        genreInput = "Romance";
+    }
+    else if (genreInput == "17") {
+        genreInput = "Sci-Fi";
+    }
+    else if (genreInput == "18") {
+        genreInput = "Thriller";
+    }
+    else if (genreInput == "19") {
+        genreInput = "War";
+    }
+    else if (genreInput == "20") {
+        genreInput = "Western";
+    }
 
-    this->filterIn.push_back(genreInput);
+    this->filterIn.at(0) = genreInput;
     
     filterOutYear();
     do {
@@ -170,7 +174,7 @@ vector<string> Input::getFilter() {
     }
     while (yearInput != "a" & yearInput != "b" & yearInput != "c" & yearInput != "d" & yearInput != "e");
 
-    this->filterIn.push_back(yearInput);
+    this->filterIn.at(1) = yearInput;
 
     filterOutDuration();
     do {
@@ -178,7 +182,7 @@ vector<string> Input::getFilter() {
     }
     while (durationInput != "a" & durationInput != "b" & durationInput != "c" & durationInput != "d" & durationInput != "e" & durationInput != "f");
 
-    this->filterIn.push_back(durationInput);
+    this->filterIn.at(2) = durationInput;
     
     filterOutRating();
     do {
@@ -186,7 +190,7 @@ vector<string> Input::getFilter() {
     }
     while (ratingInput != "a" & ratingInput != "b" & ratingInput != "c" & ratingInput != "d" & ratingInput != "e" & ratingInput != "f" & ratingInput != "g");
 
-    this->filterIn.push_back(ratingInput);
+    this->filterIn.at(3) = ratingInput;
 
     filterOutPopularity();
     do {
@@ -194,7 +198,7 @@ vector<string> Input::getFilter() {
     }
     while (popularityInput != "a" & popularityInput != "b" & popularityInput != "c" & popularityInput != "d" & popularityInput != "e");
 
-    this->filterIn.push_back(popularityInput);
+    this->filterIn.at(4) = popularityInput;
 
     return this->filterIn;
 }

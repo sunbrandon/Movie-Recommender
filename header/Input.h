@@ -12,7 +12,7 @@ class Input : public Result {
   Input();
   ~Input();
   void getMenu(vector<Movie>&);
-  char getSearch();
+  void getSearch(vector<Movie>&);
   string getSimilar();
   vector<string> getFilter();
   
