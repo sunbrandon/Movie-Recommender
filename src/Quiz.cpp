@@ -1,4 +1,5 @@
 #include "../header/Quiz.h"
+#include "../header/Search.h"
 #include <iostream>
 #include <cstdlib>
 #include <vector>

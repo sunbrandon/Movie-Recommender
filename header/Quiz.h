@@ -5,6 +5,7 @@
 #include "Output.h"
 #include "Movie.h"
 #include "Sort.h"
+#include "Search.h"
 
 using namespace std;
 

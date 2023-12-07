@@ -21,9 +21,11 @@ vector<unsigned> Search::getPoints() {  //if issues, check here
 }
 
 
-vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similar) {
+vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similarTitle) {
     vector<Movie> similarRecommend;
-    string similarTitle = similar;
+
+    //string similarTitle = getSimilar();
+
     bool movieFound = false;
 
     do {
@@ -50,7 +52,7 @@ vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similar) {
         }
     } while (movieFound == false);
 
-    searchSimilarPoints(similar, sortedList);
+    searchSimilarPoints(similarTitle, sortedList);
 
     unsigned count = 0;
 
@@ -86,10 +88,6 @@ vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similar) {
     similarRecommend.push_back(sortedList.at(index1));
     similarRecommend.push_back(sortedList.at(index2));
     similarRecommend.push_back(sortedList.at(index3));
-
-    for (unsigned i = 0; i < 100; i++) {
-        points.at(i) = 0;
-    }
 
     return similarRecommend;
 }
@@ -134,11 +132,6 @@ vector<Movie> Search::filterAlgo(vector<Movie>& sortedList, vector<string>& filt
     filtered.push_back(sortedList.at(m1));
     filtered.push_back(sortedList.at(m2));
     filtered.push_back(sortedList.at(m3));
-
-    for (unsigned i = 0; i < 100; i++) {
-        points.at(i) = 0;
-    }
-
     return filtered;
 }
 
