@@ -97,6 +97,12 @@ class Test : public Input {
     string filterResultTest(vector <Movie>&, vector <string>&);
     string randomResultTest(Movie);
 
+    //Input
+    string getMenuTest(vector<Movie>&);
+    string getSearchTest(vector<Movie>&);
+    string getSimilarTest();
+    vector<string> getFilterTest();
+
  private:
 
     Test operator=(const Test&) = delete;
