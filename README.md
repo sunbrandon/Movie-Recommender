@@ -77,12 +77,11 @@ To a lesser extent, we also considered the idea of the Interface Segregation Pri
  ![surprise result (17)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/2b735671-6993-430a-89d5-38b0974f5a19)
  
  ## Installation/Usage
- > Instructions on installing and running your application
 #### Installing:
-   1. Visit the github repository at [link](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007)
+   1. Visit the github repository at: [Movie Recommender](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007)
    2. Click the green <> Code button in the upper right part of the screen
    3. It will reveal a drop-down menu, and make sure it is on the HTTPS tab. Copy the listed URL.
-   4. Open up VSCode (make sure you are in your home directory) and run the command (replacing "<clone-url>" with the copied URL):
+   4. Open up VSCode (make sure you are in your home directory) and run the command (replacing <clone-url> with the copied URL):
       ```
       git clone --recursive <clone-url>
       ```
