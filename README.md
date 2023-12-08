@@ -77,7 +77,7 @@ To a lesser extent, we also considered the idea of the Interface Segregation Pri
  ![surprise result (17)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/2b735671-6993-430a-89d5-38b0974f5a19)
  
  ## Installation/Usage
-#### Installing:
+#### Installation:
    1. Visit the github repository at: [Movie Recommender](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007)
    2. Click the green <> Code button in the upper right part of the screen
    3. It will reveal a drop-down menu, and make sure it is on the HTTPS tab. Copy the listed URL.
@@ -119,5 +119,17 @@ To a lesser extent, we also considered the idea of the Interface Segregation Pri
       Note: To view all of the movies and their information, please refer to the movies.csv file.
 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+Our project was tested and validated through various approaches.
+
+#### Unit Testing:
+   We utilized googletest to build and test our functions. We built function tests for every implemented function in our program to maximize coverage and test for potential bugs. This was executed through the use of 63 function tests over 8 separate classes. In order to test specific functions that took in unique parameters or required inputs, we created a Tests class to alter the functions so that they would return a coverage message if the function ran as expected. To build upon this, we would validate each function with a parallel unit test to ensure that the function was ran and tested completely.
+
+#### Alpha/Beta Testing:
+   Prior to our final deliverable, our group opened up our program in two phases to willing participants. In our Alpha phase, we opened our program to close friends and classmates. By allowing our friends to mess around and play with our program, we were able to detect a handful of bugs and features that were not very user-friendly. For example, one participant was particularly eager to use our program's search similar function to receive a movie similar to "Star Wars". However, their excitement quickly turned into confusion as their input resulted in a bug we had not caught before: we had to alter certain cin occurrences to getline statements so that the buffer would take in the whole movie for search similar, not just the first word. For our Beta phase, we decided to ask our TA, Gency, for some pointers on potential improvements during office hours. He was specifically interested in our quiz feature, which worked like expected, but brought new problems to light. As developers, we were largely focused on getting the code to run as expected, but we missed the mark on user experience. We failed to realize two things: the experience was just as important as the functionality and user expectations. When the user entered an invalid input, we were missing a message to prompt them to try again, resulting in great confusion as the program waits for an input and the user waits for further instructions. We were also missing crucial whitespaces, which resulted in a messy user experience.
+
+#### Usability Testing:
+   We decided to implement usability testing, because our program must be straightforward, easy to navigate, and user-friendly. To follow through, we handed our program to roommates and acquaintances to try. As they progressed through our program, we would periodically ask them questions regarding the user experience and if the program was confusing in any manner. We ended off by asking for features they would like to see implemented, either to meet their expectations or create a better product overall. This form of testing was specifically useful for us when weighing movies against one another. The testing process enabled us to receive useful feedback regarding the recommended movies and user expectations. For example, in our search filter function, we had previously thought that genre was an important category, but severly underestimated how users viewed its importance. This resulted in a need to increase the weight of genres and decrease the weight of filters such as popularity.
+
+#### Regression Testing:
+   A form of testing we had previously overlooked proved to be crucial as we struggled to identify where the bug originated from. Through the complexities of creating, checking out, and merging branches, we thought we had everything together until we realized that we were receiving a reoccuring bug that we had resolved in the previous sprint. This was a combination of bugs originating from our invalid input prompts and change in funtion parameters. We had somehow messed up some of our code during a merge conflict when testing and our working code broke. This resulted in a need for us to re-test functions that had worked to check if our code had regressed. Unfortunately, it had, so we needed to find a different solution and ended up working it out.
  
