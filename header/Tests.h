@@ -13,37 +13,37 @@ class Tests : public Input {
 
 
     //Movie
-   //  string setYearTest(int year);
-   //  string setNumOfVotesTest(int votes);
-   //  string setDurationTest(int duration);
+    string setYearTest();
+    string setNumOfVotesTest();
+    string setDurationTest();
 
-   //  string setRatingTest(double rating);
+    string setRatingTest();
 
-   //  string setTitleTest(string title);
-   //  string setProductionTest(string production);
-   //  string setMovieIDTest(string movieID);
+    string setTitleTest();
+    string setProductionTest();
+    string setMovieIDTest();
 
-   //  string setGenresTest(vector<string>& genre);
-   //  string setDirectorsTest(vector<string>& directors);
-   //  string setWritersTest(vector<string>& writers);
-   //  string setActorsTest(vector<string>& actors);
-   //  string setDescriptionsTest(vector<string>& description);
+    string setGenresTest();
+    string setDirectorsTest();
+    string setWritersTest();
+    string setActorsTest();
+    string setDescriptionsTest();
 
-   //  int getYearTest() const;
-   //  int getNumOfVotesTest() const;
-   //  int getDurationTest() const;
+    string getYearTest() const;
+    string getNumOfVotesTest() const;
+    string getDurationTest() const;
 
-   //  double getRatingTest() const;
+    string getRatingTest() const;
 
-   //  string getTitleTest() const;
-   //  string getProductionTest() const;
-   //  string getMovieIDTest() const;
+    string getTitleTest() const;
+    string getProductionTest() const;
+    string getMovieIDTest() const;
 
-   //  vector<string> getGenresTest() const;
-   //  vector<string> getDirectorsTest() const;
-   //  vector<string> getWritersTest() const;
-   //  vector<string> getActorsTest() const;
-   //  vector<string> getDescriptionsTest() const;
+    string getGenresTest() const;
+    string  getDirectorsTest() const;
+    string getWritersTest() const;
+    string getActorsTest() const;
+    string getDescriptionsTest() const;
 
 
    //  //Output
@@ -63,7 +63,7 @@ class Tests : public Input {
 
 
    //  //Sort
-   //  vector<Movie> sortCSVTest();
+   string sortCSVTest();
 
 
    //  //Quiz
