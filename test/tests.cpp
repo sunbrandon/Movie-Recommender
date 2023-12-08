@@ -5,6 +5,57 @@
 
 using namespace std;
 
+// QUIZ TESTS
+TEST(QuizTests, TestQuizAlgo) {
+    Tests *t = new Tests();
+    string result = t->quizAlgoTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: quizAlgo()");
+}
+
+TEST(QuizTests, TestGetQuiz) {
+    Tests *t = new Tests();
+    string result = t->getQuizTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: getQuiz()");
+}
+
+TEST(QuizTests, TestQ1Points) {
+    Tests *t = new Tests();
+    string result = t->q1PointsTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: q1Points()");
+}
+
+TEST(QuizTests, TestQ2Points) {
+    Tests *t = new Tests();
+    string result = t->q2PointsTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: q2Points()");
+}
+
+TEST(QuizTests, TestQ3Points) {
+    Tests *t = new Tests();
+    string result = t->q3PointsTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: q3Points()");
+}
+
+TEST(QuizTests, TestQ4Points) {
+    Tests *t = new Tests();
+    string result = t->q4PointsTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: q4Points()");
+}
+
+TEST(QuizTests, TestQ5Points) {
+    Tests *t = new Tests();
+    string result = t->q5PointsTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: q5Points()");
+}
+
+
 TEST(SearchTests, TestGetPoints) {
     Tests *t = new Tests();
     string result = t->getPointsTest();
@@ -68,6 +119,38 @@ TEST(SearchTests, TestVoteFilterPoints) {
     EXPECT_EQ(result, "Covered: voteFilterPoints()");
 }
 
+
+// RESULT TESTS
+TEST(ResultTests, TestQuizResult) {
+    Tests *t = new Tests();
+    string result = t->quizResultTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: quizResult()");
+}
+
+TEST(ResultTests, TestSimilarResult) {
+    Tests *t = new Tests();
+    string result = t->similarResultTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: similarResult()");
+}
+
+TEST(ResultTests, TestFilterResult) {
+    Tests *t = new Tests();
+    string result = t->filterResultTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: filterResult()");
+}
+
+TEST(ResultTests, TestRandomResult) {
+    Tests *t = new Tests();
+    string result = t->randomResultTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: randomResult()");
+}
+
+
+// INPUT TESTS
 TEST(InputTests, TestGetMenu) {
     Tests *t = new Tests();
     string result = t->getMenuTest();
