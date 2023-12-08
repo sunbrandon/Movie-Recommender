@@ -89,3 +89,9 @@ string Test::quizResultTest(vector <Movie>&) {}
 string Test::similarResultTest(vector <Movie>&, string) {}
 string Test::filterResultTest(vector <Movie>&, vector <string>&) {}
 string Test::randomResultTest(Movie) {}
+
+//Input
+string Test::getMenuTest(vector<Movie>&) {}
+string Test::getSearchTest(vector<Movie>&) {}
+string Test::getSimilarTest() {}
+vector<string> Test::getFilterTest() {}
