@@ -32,9 +32,12 @@ void Input::getMenu(vector<Movie>& sortedList) {
 
     do {
         cin >> input;
+        cout << endl;
         while (input != "1" & input != "2" & input != "3" & input != "q") {
             cout << "Invalid input, please try again." << endl;
+            cout << endl;
             cin >> input;
+            cout << endl;
         }
         if (input == "1") {
             getSearch(sortedList);
