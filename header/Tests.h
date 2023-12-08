@@ -13,40 +13,40 @@ class Tests : public Input {
 
 
     //Movie
-   //  string setYearTest(int year);
-   //  string setNumOfVotesTest(int votes);
-   //  string setDurationTest(int duration);
+    string setYearTest();
+    string setNumOfVotesTest();
+    string setDurationTest();
 
-   //  string setRatingTest(double rating);
+    string setRatingTest();
 
-   //  string setTitleTest(string title);
-   //  string setProductionTest(string production);
-   //  string setMovieIDTest(string movieID);
+    string setTitleTest();
+    string setProductionTest();
+    string setMovieIDTest();
 
-   //  string setGenresTest(vector<string>& genre);
-   //  string setDirectorsTest(vector<string>& directors);
-   //  string setWritersTest(vector<string>& writers);
-   //  string setActorsTest(vector<string>& actors);
-   //  string setDescriptionsTest(vector<string>& description);
+    string setGenresTest();
+    string setDirectorsTest();
+    string setWritersTest();
+    string setActorsTest();
+    string setDescriptionsTest();
 
-   //  int getYearTest() const;
-   //  int getNumOfVotesTest() const;
-   //  int getDurationTest() const;
+    int getYearTest() const;
+    int getNumOfVotesTest() const;
+    int getDurationTest() const;
 
-   //  double getRatingTest() const;
+    double getRatingTest() const;
 
-   //  string getTitleTest() const;
-   //  string getProductionTest() const;
-   //  string getMovieIDTest() const;
+    string getTitleTest() const;
+    string getProductionTest() const;
+    string getMovieIDTest() const;
 
-   //  vector<string> getGenresTest() const;
-   //  vector<string> getDirectorsTest() const;
-   //  vector<string> getWritersTest() const;
-   //  vector<string> getActorsTest() const;
-   //  vector<string> getDescriptionsTest() const;
+    vector<string> getGenresTest() const;
+    vector<string> getDirectorsTest() const;
+    vector<string> getWritersTest() const;
+    vector<string> getActorsTest() const;
+    vector<string> getDescriptionsTest() const;
 
 
-   //  //Output
+    //Output
     string outputMenuTest();
     string questionOut1Test();
     string questionOut2Test();
@@ -62,18 +62,18 @@ class Tests : public Input {
     string filterOutPopularityTest();
 
 
-   //  //Sort
-   //  vector<Movie> sortCSVTest();
+    //Sort
+    string sortCSVTest();
 
 
-   //  //Quiz
-   //  vector<Movie> quizAlgoTest(vector<Movie> &);
-   //  vector<string> getQuizTest();
-   //  string q1PointsTest(vector<Movie> &, string choice);
-   //  string q2PointsTest(vector<Movie> &, string choice);
-   //  string q3PointsTest(vector<Movie> &, string choice);
-   //  string q4PointsTest(vector<Movie> &, string choice);
-   //  string q5PointsTest(vector<Movie> &, string choice);
+    //Quiz
+    string quizAlgoTest();
+    string getQuizTest();
+    string q1PointsTest();
+    string q2PointsTest();
+    string q3PointsTest();
+    string q4PointsTest();
+    string q5PointsTest();
 
 
     //Search
@@ -92,11 +92,11 @@ class Tests : public Input {
     string randomAlgoTest();
 
 
-   //  //Result
-   //  string quizResultTest(vector <Movie>&);
-   //  string similarResultTest(vector <Movie>&, string);
-   //  string filterResultTest(vector <Movie>&, vector <string>&);
-   //  string randomResultTest(Movie);
+    //Result
+    string quizResultTest();
+    string similarResultTest();
+    string filterResultTest();
+    string randomResultTest();
 
 
     //Input
