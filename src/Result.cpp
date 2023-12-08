@@ -8,8 +8,8 @@ Result::Result() {}
 
 Result::~Result() {}
 
-void Result::quizResult(vector <Movie>& movie) {
-    vector<Movie> quizMovies = quizAlgo(movie);
+void Result::quizResult(vector<Movie>& sortedList) {
+    vector<Movie> quizMovies = quizAlgo(sortedList);
     cout << endl;
     cout << "Recommendations based on your quiz answers: " << endl;
     cout << endl;
@@ -65,8 +65,8 @@ void Result::quizResult(vector <Movie>& movie) {
     }
 }
 
-void Result::similarResult(vector <Movie>& movie, string similarTitle) {
-    vector<Movie> similarMovies = similarAlgo(movie, similarTitle);
+void Result::similarResult(vector<Movie>& sortedList, string similarTitle) {
+    vector<Movie> similarMovies = similarAlgo(sortedList, similarTitle);
     cout << endl;
     cout << endl;
     cout << "Recommendations based on movie:" << endl;
@@ -123,11 +123,11 @@ void Result::similarResult(vector <Movie>& movie, string similarTitle) {
     }
 }
 
-void Result::filterResult(vector <Movie>& movie, vector <string>& filters) {
+void Result::filterResult(vector<Movie>& sortedList, vector<string>& filters) {
     cout << endl;
     cout << "Recommendations based on filters:" << endl;
     cout << endl;
-    vector <Movie> filteredMovies = filterAlgo(movie, filters);
+    vector <Movie> filteredMovies = filterAlgo(sortedList, filters);
     for (int i = 0; i < 3; ++i){
         cout << "Movie title: " << filteredMovies.at(i).getTitle() << endl;
         cout << "Year of movie: " << filteredMovies.at(i).getYear() << endl;

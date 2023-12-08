@@ -67,13 +67,13 @@ class Tests : public Input {
 
 
    //  //Quiz
-   //  vector<Movie> quizAlgoTest(vector<Movie> &);
-   //  vector<string> getQuizTest();
-   //  string q1PointsTest(vector<Movie> &, string choice);
-   //  string q2PointsTest(vector<Movie> &, string choice);
-   //  string q3PointsTest(vector<Movie> &, string choice);
-   //  string q4PointsTest(vector<Movie> &, string choice);
-   //  string q5PointsTest(vector<Movie> &, string choice);
+    string quizAlgoTest();
+    string getQuizTest();
+    string q1PointsTest();
+    string q2PointsTest();
+    string q3PointsTest();
+    string q4PointsTest();
+    string q5PointsTest();
 
 
     //Search
@@ -92,11 +92,11 @@ class Tests : public Input {
    //  Movie randomAlgoTest(vector <Movie>& sortedList);
 
 
-   //  //Result
-   //  string quizResultTest(vector <Movie>&);
-   //  string similarResultTest(vector <Movie>&, string);
-   //  string filterResultTest(vector <Movie>&, vector <string>&);
-   //  string randomResultTest(Movie);
+    //Result
+    string quizResultTest();
+    string similarResultTest();
+    string filterResultTest();
+    string randomResultTest();
 
 
     //Input
