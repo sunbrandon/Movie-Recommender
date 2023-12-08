@@ -78,6 +78,47 @@ To a lesser extent, we also considered the idea of the Interface Segregation Pri
  
  ## Installation/Usage
  > Instructions on installing and running your application
+#### Installing:
+   1. Visit the github repository at [link](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007)
+   2. Click the green <> Code button in the upper right part of the screen
+   3. It will reveal a drop-down menu, and make sure it is on the HTTPS tab. Copy the listed URL.
+   4. Open up VSCode (make sure you are in your home directory) and run the command (replacing "<clone-url>" with the copied URL):
+      ```
+      git clone --recursive <clone-url>
+      ```
+   5. If you see the files and folders load in, then you are good to go!
+
+#### Usage:
+   1. In the correct directory, begin by running:
+      ```
+      cmake .
+      ```
+      and
+      ```
+      make
+      ```
+      These will allow the user to build and execute the code
+   2. Run:
+      ```
+      ./bin/movieRec
+      ```
+      Note: Make sure you are in the program directory, or there may be issues running the executable
+   3. The program should run, and the user will be prompted with a menu of options that list various ways to receive movie recommendations.
+      Options include:
+        1) Search Similar
+             - Presented from the "Search" option, this option allows the user to input a movie (within the database) and receive 3 recommendations based off of similarities between the movies (e.g. genres).
+        2) Search Filter
+             - Presented from the "Search" option, this option narrows down a user's preferences through filters such as genres, duration, and popularity. 3 specialized movie recommendations will be outputted.
+        3) Quiz
+             - This option presents the user with a series of fun and personalized questions. The program will suggest 3 movies based off of the user's answers.
+        4) Surprise!
+             - This option surprises the user with a random movie recommendation.
+      
+   4. To exit/end the program, users may enter 'q' from the menu. Similarly, if users choose a search option, but decide against it, they may enter 'c' to return to the menu and select a different option.
+   5. Upon exiting the menu, the program will end. To run again, simply start from Step 2.
+
+      Note: To view all of the movies and their information, please refer to the movies.csv file.
+
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
