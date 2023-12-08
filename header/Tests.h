@@ -40,33 +40,33 @@ class Tests : public Input {
     string getMovieIDTest() const;
 
     string getGenresTest() const;
-    string  getDirectorsTest() const;
+    string getDirectorsTest() const;
     string getWritersTest() const;
     string getActorsTest() const;
     string getDescriptionsTest() const;
 
 
-   //  //Output
-   //  string outputMenuTest();
-   //  string questionOut1Test();
-   //  string questionOut2Test();
-   //  string questionOut3Test();
-   //  string questionOut4Test();
-   //  string questionOut5Test();
-   //  string searchChoiceOutTest();
-   //  string similarOutTest();
-   //  string filterOutGenreTest();
-   //  string filterOutYearTest();
-   //  string filterOutDurationTest();
-   //  string filterOutRatingTest();
-   //  string filterOutPopularityTest();
+    //Output
+    string outputMenuTest();
+    string questionOut1Test();
+    string questionOut2Test();
+    string questionOut3Test();
+    string questionOut4Test();
+    string questionOut5Test();
+    string searchChoiceOutTest();
+    string similarOutTest();
+    string filterOutGenreTest();
+    string filterOutYearTest();
+    string filterOutDurationTest();
+    string filterOutRatingTest();
+    string filterOutPopularityTest();
 
 
-   //  //Sort
-   string sortCSVTest();
+    //Sort
+    string sortCSVTest();
 
 
-   //  //Quiz
+    //Quiz
     string quizAlgoTest();
     string getQuizTest();
     string q1PointsTest();
@@ -89,7 +89,7 @@ class Tests : public Input {
 
 
     //Random
-   //  Movie randomAlgoTest(vector <Movie>& sortedList);
+    string randomAlgoTest();
 
 
     //Result
