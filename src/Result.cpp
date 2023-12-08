@@ -11,7 +11,8 @@ Result::~Result() {}
 void Result::quizResult(vector <Movie>& movie) {
     vector<Movie> quizMovies = quizAlgo(movie);
     cout << endl;
-    cout << "Recommendations based on your quiz answers: " << endl;    
+    cout << "Recommendations based on your quiz answers: " << endl;
+    cout << endl;
     for (int i = 0; i < 3; ++i){
         cout << "Movie title: " << quizMovies.at(i).getTitle() << endl;
         cout << "Year of movie: " << quizMovies.at(i).getYear() << endl;
@@ -67,7 +68,9 @@ void Result::quizResult(vector <Movie>& movie) {
 void Result::similarResult(vector <Movie>& movie, string similarTitle) {
     vector<Movie> similarMovies = similarAlgo(movie, similarTitle);
     cout << endl;
+    cout << endl;
     cout << "Recommendations based on movie:" << endl;
+    cout << endl;
     for (int i = 0; i < 3; ++i){
         cout << "Movie title: " << similarMovies.at(i).getTitle() << endl;
         cout << "Year of movie: " << similarMovies.at(i).getYear() << endl;
@@ -179,7 +182,9 @@ void Result::filterResult(vector <Movie>& movie, vector <string>& filters) {
 
 void Result::randomResult(Movie movie) {
     cout << endl;
+    cout << endl;
     cout << "Try watching this movie:" << endl;
+    cout << endl;
     cout << "Movie title: " << movie.getTitle() << endl;
     cout << "Year of movie: " << movie.getYear() << endl;
     cout << "Movie genre(s): ";

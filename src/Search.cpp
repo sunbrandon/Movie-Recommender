@@ -45,7 +45,7 @@ vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similar) {
         
         if (movieFound == false) {
             cout << endl;
-            cout << "The movie entered is not in the database.  Please try again." << endl;
+            cout << "The movie entered is not in the database. Please try again." << endl;
             cout << endl;
             getline(cin, similarTitle);
         }

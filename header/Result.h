@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstdlib>
+#include <string>
 #include "Search.h"
 #include "Quiz.h"
 #include "Random.h"

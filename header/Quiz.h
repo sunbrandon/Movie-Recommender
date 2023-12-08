@@ -14,12 +14,12 @@ class Quiz : public Output, public Sort {
   Quiz();
   ~Quiz();
   vector<Movie> quizAlgo(vector<Movie> &);
-  vector<char> getQuiz();
-  void q1Points(vector<Movie> &, char choice);
-  void q2Points(vector<Movie> &, char choice);
-  void q3Points(vector<Movie> &, char choice);
-  void q4Points(vector<Movie> &, char choice);
-  void q5Points(vector<Movie> &, char choice);
+  vector<string> getQuiz();
+  void q1Points(vector<Movie> &, string choice);
+  void q2Points(vector<Movie> &, string choice);
+  void q3Points(vector<Movie> &, string choice);
+  void q4Points(vector<Movie> &, string choice);
+  void q5Points(vector<Movie> &, string choice);
   
  private:
     
