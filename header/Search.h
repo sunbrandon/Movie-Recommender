@@ -14,7 +14,6 @@ class Search : public Sort {
   Search();
   ~Search();
   vector<unsigned> getPoints();
-
   vector<Movie> similarAlgo(vector<Movie>&, string);
   vector<Movie> filterAlgo(vector<Movie>&, vector<string>&);
   void searchSimilarPoints(string, vector<Movie>&);

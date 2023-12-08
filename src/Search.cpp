@@ -307,7 +307,7 @@ void Search::voteFilterPoints(vector<Movie>& movies, vector<string>& filters) {
         else if (filters.at(4) == "c" && movies.at(i).getNumOfVotes() >= 1000001 && movies.at(i).getNumOfVotes() <= 1500000) {
             points.at(i) += 1;
         }
-        else if (filters.at(4) == "c" && movies.at(i).getNumOfVotes() >= 1500001 && movies.at(i).getNumOfVotes() <= 2000000) {
+        else if (filters.at(4) == "d" && movies.at(i).getNumOfVotes() >= 1500001 && movies.at(i).getNumOfVotes() <= 2000000) {
             points.at(i) += 1;
         }
         else if (filters.at(4) == "e" && movies.at(i).getNumOfVotes() >= 2000001 && movies.at(i).getNumOfVotes() <= 2500000) {
