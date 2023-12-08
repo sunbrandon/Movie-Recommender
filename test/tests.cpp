@@ -5,6 +5,98 @@
 
 using namespace std;
 
+// OUTPUT TESTS
+TEST(OutputTests, TestOutputMenu) {
+    Tests *t = new Tests();
+    string result = t->outputMenuTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: outputMenu()");
+}
+
+TEST(OutputTests, TestQuestionOut1) {
+    Tests *t = new Tests();
+    string result = t->questionOut1Test();
+    delete t;
+    EXPECT_EQ(result, "Covered: questionOut1()");
+}
+
+TEST(OutputTests, TestQuestionOut2) {
+    Tests *t = new Tests();
+    string result = t->questionOut2Test();
+    delete t;
+    EXPECT_EQ(result, "Covered: questionOut2()");
+}
+
+TEST(OutputTests, TestQuestionOut3) {
+    Tests *t = new Tests();
+    string result = t->questionOut3Test();
+    delete t;
+    EXPECT_EQ(result, "Covered: questionOut3()");
+}
+
+TEST(OutputTests, TestQuestionOut4) {
+    Tests *t = new Tests();
+    string result = t->questionOut4Test();
+    delete t;
+    EXPECT_EQ(result, "Covered: questionOut4()");
+}
+
+TEST(OutputTests, TestQuestionOut5) {
+    Tests *t = new Tests();
+    string result = t->questionOut5Test();
+    delete t;
+    EXPECT_EQ(result, "Covered: questionOut5()");
+}
+
+TEST(OutputTests, TestSearchChoiceOut) {
+    Tests *t = new Tests();
+    string result = t->searchChoiceOutTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: searchChoiceOut()");
+}
+
+TEST(OutputTests, TestSimilarOut) {
+    Tests *t = new Tests();
+    string result = t->similarOutTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: similarOut()");
+}
+
+TEST(OutputTests, TestFilterOutGenre) {
+    Tests *t = new Tests();
+    string result = t->filterOutGenreTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: filterOutGenre()");
+}
+
+TEST(OutputTests, TestFilterOutYear) {
+    Tests *t = new Tests();
+    string result = t->filterOutYearTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: filterOutYear()");
+}
+
+TEST(OutputTests, TestFilterOutDuration) {
+    Tests *t = new Tests();
+    string result = t->filterOutDurationTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: filterOutDuration()");
+}
+
+TEST(OutputTests, TestFilterOutRating) {
+    Tests *t = new Tests();
+    string result = t->filterOutRatingTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: filterOutRating()");
+}
+
+TEST(OutputTests, TestFilterOutPopularity) {
+    Tests *t = new Tests();
+    string result = t->filterOutPopularityTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: filterOutPopularity()");
+}
+
 TEST(SearchTests, TestGetPoints) {
     Tests *t = new Tests();
     string result = t->getPointsTest();
@@ -66,6 +158,14 @@ TEST(SearchTests, TestVoteFilterPoints) {
     string result = t->voteFilterPointsTest();
     delete t;
     EXPECT_EQ(result, "Covered: voteFilterPoints()");
+}
+
+// RANDOM TESTS
+TEST(RandomTests, TestRandomAlgo) {
+    Tests *t = new Tests();
+    string result = t->randomAlgoTest();
+    delete t;
+    EXPECT_EQ(result, "Covered: randomAlgo()");
 }
 
 TEST(InputTests, TestGetMenu) {

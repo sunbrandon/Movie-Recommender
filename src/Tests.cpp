@@ -40,19 +40,109 @@ Tests::~Tests() {}
 
 
 // //Output
-// string Test::outputMenuTest() {}
-// string Test::questionOut1Test() {}
-// string Test::questionOut2Test() {}
-// string Test::questionOut3Test() {}
-// string Test::questionOut4Test() {}
-// string Test::questionOut5Test() {}
-// string Test::searchChoiceOutTest() {}
-// string Test::similarOutTest() {}
-// string Test::filterOutGenreTest() {}
-// string Test::filterOutYearTest() {}
-// string Test::filterOutDurationTest() {}
-// string Test::filterOutRatingTest() {}
-// string Test::filterOutPopularityTest() {}
+string Tests::outputMenuTest() {
+    Output* o = new Output();
+    o->outputMenu();
+
+    delete o;
+    return "Covered: outputMenu()";
+}
+
+string Tests::questionOut1Test() {
+    Output* o = new Output();
+    o->questionOut1();
+
+    delete o;
+    return "Covered: questionOut1()";
+}
+
+string Tests::questionOut2Test() {
+    Output* o = new Output();
+    o->questionOut2();
+
+    delete o;
+    return "Covered: questionOut2()";
+}
+
+string Tests::questionOut3Test() {
+    Output* o = new Output();
+    o->questionOut3();
+
+    delete o;
+    return "Covered: questionOut3()";
+}
+
+string Tests::questionOut4Test() {
+    Output* o = new Output();
+    o->questionOut4();
+
+    delete o;
+    return "Covered: questionOut4()";
+}
+
+string Tests::questionOut5Test() {
+    Output* o = new Output();
+    o->questionOut5();
+
+    delete o;
+    return "Covered: questionOut5()";
+}
+
+string Tests::searchChoiceOutTest() {
+    Output* o = new Output();
+    o->searchChoiceOut();
+
+    delete o;
+    return "Covered: searchChoiceOut()";
+}
+
+string Tests::similarOutTest() {
+    Output* o = new Output();
+    o->similarOut();
+
+    delete o;
+    return "Covered: similarOut()";
+}
+
+string Tests::filterOutGenreTest() {
+    Output* o = new Output();
+    o->filterOutGenre();
+
+    delete o;
+    return "Covered: filterOutGenre()";
+}
+
+string Tests::filterOutYearTest() {
+    Output* o = new Output();
+    o->filterOutYear();
+
+    delete o;
+    return "Covered: filterOutYear()";
+}
+
+string Tests::filterOutDurationTest() {
+    Output* o = new Output();
+    o->filterOutDuration();
+
+    delete o;
+    return "Covered: filterOutDuration()";
+}
+
+string Tests::filterOutRatingTest() {
+    Output* o = new Output();
+    o->filterOutRating();
+
+    delete o;
+    return "Covered: filterOutRating()";
+}
+
+string Tests::filterOutPopularityTest() {
+    Output* o = new Output();
+    o->filterOutPopularity();
+
+    delete o;
+    return "Covered: filterOutPopularity()";
+}
 
 
 // //Sort
@@ -230,7 +320,17 @@ string Tests::voteFilterPointsTest() {
 
 
 //Random
-// Movie Test::randomAlgoTest(vector <Movie>& sortedList) {}
+string Tests::randomAlgoTest() {
+    Random* r = new Random();
+    Sort* s = new Sort();
+    vector<Movie> sortedList;
+    sortedList = s->sortCSV();
+    r->randomAlgo(sortedList);
+
+    delete r;
+    delete s;
+    return "Covered: randomAlgo()";
+}
 
 
 // //Result

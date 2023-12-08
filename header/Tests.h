@@ -47,19 +47,19 @@ class Tests : public Input {
 
 
    //  //Output
-   //  string outputMenuTest();
-   //  string questionOut1Test();
-   //  string questionOut2Test();
-   //  string questionOut3Test();
-   //  string questionOut4Test();
-   //  string questionOut5Test();
-   //  string searchChoiceOutTest();
-   //  string similarOutTest();
-   //  string filterOutGenreTest();
-   //  string filterOutYearTest();
-   //  string filterOutDurationTest();
-   //  string filterOutRatingTest();
-   //  string filterOutPopularityTest();
+    string outputMenuTest();
+    string questionOut1Test();
+    string questionOut2Test();
+    string questionOut3Test();
+    string questionOut4Test();
+    string questionOut5Test();
+    string searchChoiceOutTest();
+    string similarOutTest();
+    string filterOutGenreTest();
+    string filterOutYearTest();
+    string filterOutDurationTest();
+    string filterOutRatingTest();
+    string filterOutPopularityTest();
 
 
    //  //Sort
@@ -89,7 +89,7 @@ class Tests : public Input {
 
 
     //Random
-   //  Movie randomAlgoTest(vector <Movie>& sortedList);
+    string randomAlgoTest();
 
 
    //  //Result
