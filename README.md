@@ -58,7 +58,24 @@ To a lesser extent, we also considered the idea of the Interface Segregation Pri
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ ![1](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/3fee3963-0280-4739-bf99-c20452e5f043)
+ ![search choice (2)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/88d363ae-503d-4a13-a9ef-54d2cfb4f08f)
+ ![search similar (3)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/a29c1041-04b7-4c47-b5b3-fe09c11f72a6)
+ ![search similar result (4)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/a38ec6cc-6696-45b7-bc7b-16d6dabdddfd)
+ ![search filter (5)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/07d6272d-2f52-4b6c-a5b4-f8d1e57fa426)
+ ![search filter decade (6)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/93bc7fc0-c664-403a-b95b-00e011b63a25)
+ ![screen filter duration (7)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/6ae3fc51-6471-4363-8a53-b65bd0a54217)
+ ![search filter rating (8)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/d0e9fad5-5ec2-491b-aa5d-cff22707cea0)
+ ![search filter popularity (9)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/9c793874-1762-40bd-b87e-797a21c5ea40)
+ ![search filter result (10)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/8e3228c7-bf3a-47de-9777-35317dfea124)
+ ![quiz question 1 (11)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/675a3df3-132d-4a42-8c9f-51c78a0f7862)
+ ![quiz question 2 (12)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/d21adb1f-bac3-496a-907a-1fc746905d75)
+ ![quiz question 3 (13)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/5459eaa8-0a37-4b72-b307-448c4a76aaaa)
+ ![quiz question 4 (14)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/4afd3b30-9c7a-4070-9e8a-198c7a15cd34)
+ ![quiz question 5 (15)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/1693099f-2906-448a-8807-a9902ff6868f)
+ ![quiz result (16)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/e498896a-3441-4ed3-b37b-0011f625546b)
+ ![surprise result (17)](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/2b735671-6993-430a-89d5-38b0974f5a19)
+ 
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
