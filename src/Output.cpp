@@ -13,7 +13,7 @@ void Output::outputMenu() {
     cout << endl;
     cout << "1. Search" << endl;
     cout << "2. Quiz" << endl;
-    cout << "3. Surprise" << endl;
+    cout << "3. Surprise!" << endl;
     cout << "q. Exit" << endl;
     cout << endl;
 }
@@ -119,7 +119,6 @@ void Output::filterOutGenre() {
 
 void Output::filterOutYear(){
 
-    cout << endl;
     cout << "Select a decade: " << endl;
     cout << endl;
     cout << "a. 1920 - 1940" << endl;
@@ -133,7 +132,6 @@ void Output::filterOutYear(){
 
 void Output::filterOutDuration(){
 
-    cout << endl;
     cout << "Select the length of the movie (minutes): " << endl;
     cout << endl;
     cout << "a. 60 - 90" << endl;
@@ -148,7 +146,6 @@ void Output::filterOutDuration(){
 
 void Output::filterOutRating(){
 
-    cout << endl;
     cout << "Select the rating of the movie: " << endl;
     cout << endl;
     cout << "a. 0 - 8.3" << endl;
@@ -164,7 +161,6 @@ void Output::filterOutRating(){
 
 void Output::filterOutPopularity(){
 
-    cout << endl;
     cout << "Select the popularity of the movie: " << endl;
     cout << endl;
     cout << "a. 50,000 - 500,000" << endl;

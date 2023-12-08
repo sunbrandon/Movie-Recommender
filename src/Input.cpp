@@ -116,6 +116,16 @@ vector<string> Input::getFilter() {
     filterOutGenre();
     do { 
         cin >> genreInput;
+        cout << endl;
+        while (genreInput != "1" & genreInput != "2" & genreInput != "3" & genreInput != "4" & genreInput != "5" & 
+            genreInput != "6" & genreInput != "7" & genreInput != "8" & genreInput != "9" & genreInput != "10" & 
+            genreInput != "11" & genreInput != "12" & genreInput != "13" & genreInput != "14" & genreInput != "15" & 
+            genreInput != "16" & genreInput != "17" & genreInput != "18" & genreInput != "19" & genreInput != "20") {
+                cout << "Invalid input, please try again." << endl;
+                cout << endl;
+                cin >> genreInput;
+                cout << endl;
+        }
     }
     while (genreInput != "1" & genreInput != "2" & genreInput != "3" & genreInput != "4" & genreInput != "5" & 
             genreInput != "6" & genreInput != "7" & genreInput != "8" & genreInput != "9" & genreInput != "10" & 
@@ -188,6 +198,13 @@ vector<string> Input::getFilter() {
     filterOutYear();
     do {
         cin >> yearInput;
+        cout << endl;
+        while (yearInput != "a" & yearInput != "b" & yearInput != "c" & yearInput != "d" & yearInput != "e") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> yearInput;
+            cout << endl;
+        }
     }
     while (yearInput != "a" & yearInput != "b" & yearInput != "c" & yearInput != "d" & yearInput != "e");
 
@@ -196,6 +213,13 @@ vector<string> Input::getFilter() {
     filterOutDuration();
     do {
         cin >> durationInput;
+        cout << endl;
+        while (durationInput != "a" & durationInput != "b" & durationInput != "c" & durationInput != "d" & durationInput != "e" & durationInput != "f") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> durationInput;
+            cout << endl;
+        }
     }
     while (durationInput != "a" & durationInput != "b" & durationInput != "c" & durationInput != "d" & durationInput != "e" & durationInput != "f");
 
@@ -204,6 +228,13 @@ vector<string> Input::getFilter() {
     filterOutRating();
     do {
         cin >> ratingInput;
+        cout << endl;
+        while (ratingInput != "a" & ratingInput != "b" & ratingInput != "c" & ratingInput != "d" & ratingInput != "e" & ratingInput != "f" & ratingInput != "g") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> ratingInput;
+            cout << endl;
+        }
     }
     while (ratingInput != "a" & ratingInput != "b" & ratingInput != "c" & ratingInput != "d" & ratingInput != "e" & ratingInput != "f" & ratingInput != "g");
 
@@ -212,6 +243,13 @@ vector<string> Input::getFilter() {
     filterOutPopularity();
     do {
         cin >> popularityInput;
+        cout << endl;
+        while (popularityInput != "a" & popularityInput != "b" & popularityInput != "c" & popularityInput != "d" & popularityInput != "e") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> popularityInput;
+            cout << endl;
+        }
     }
     while (popularityInput != "a" & popularityInput != "b" & popularityInput != "c" & popularityInput != "d" & popularityInput != "e");
 

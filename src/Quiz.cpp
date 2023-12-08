@@ -14,7 +14,7 @@ Quiz::Quiz() {
 Quiz::~Quiz() {}
 
 vector<Movie> Quiz::quizAlgo(vector<Movie> &sortedList) {
-    vector<char> quizInputs = getQuiz();
+    vector<string> quizInputs = getQuiz();
     q1Points(sortedList, quizInputs.at(0));
     q2Points(sortedList, quizInputs.at(1));
     q3Points(sortedList, quizInputs.at(2));
@@ -60,8 +60,8 @@ vector<Movie> Quiz::quizAlgo(vector<Movie> &sortedList) {
     return quizResult;
 }
 
-void Quiz::q1Points(vector<Movie> &sortedList, char choice) {
-    if (choice == 'a') {
+void Quiz::q1Points(vector<Movie> &sortedList, string choice) {
+    if (choice == "a") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Comedy") {
@@ -70,7 +70,7 @@ void Quiz::q1Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'b') {
+    else if (choice == "b") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Adventure") {
@@ -79,7 +79,7 @@ void Quiz::q1Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'c') {
+    else if (choice == "c") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Animation") {
@@ -88,7 +88,7 @@ void Quiz::q1Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'd') {
+    else if (choice == "d") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Romance") {
@@ -99,8 +99,8 @@ void Quiz::q1Points(vector<Movie> &sortedList, char choice) {
     }
 }
 
-void Quiz::q2Points(vector<Movie> &sortedList, char choice) {
-    if (choice == 'a') {
+void Quiz::q2Points(vector<Movie> &sortedList, string choice) {
+    if (choice == "a") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Romance") {
@@ -109,7 +109,7 @@ void Quiz::q2Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'b') {
+    else if (choice == "b") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Adventure") {
@@ -118,7 +118,7 @@ void Quiz::q2Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'c') {
+    else if (choice == "c") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Comedy") {
@@ -127,7 +127,7 @@ void Quiz::q2Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'd') {
+    else if (choice == "d") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Action") {
@@ -138,29 +138,29 @@ void Quiz::q2Points(vector<Movie> &sortedList, char choice) {
     }
 }
 
-void Quiz::q3Points(vector<Movie> &sortedList, char choice) {
-    if (choice == 'a') {
+void Quiz::q3Points(vector<Movie> &sortedList, string choice) {
+    if (choice == "a") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getTitle() == "The Matrix") {
                 points.at(i) += 1;
             }
         }
     }
-    else if (choice == 'b') {
+    else if (choice == "b") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getTitle() == "The Departed") {
                 points.at(i) += 1;
             }
         }
     }
-    else if (choice == 'c') {
+    else if (choice == "c") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getTitle() == "Whiplash") {
                 points.at(i) += 1;
             }
         }
     }
-    else if (choice == 'd') {
+    else if (choice == "d") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getTitle() == "Raiders of the Lost Ark") {
                 points.at(i) += 1;
@@ -169,8 +169,8 @@ void Quiz::q3Points(vector<Movie> &sortedList, char choice) {
     }
 }
 
-void Quiz::q4Points(vector<Movie> &sortedList, char choice) {
-    if (choice == 'a') {
+void Quiz::q4Points(vector<Movie> &sortedList, string choice) {
+    if (choice == "a") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Comedy") {
@@ -179,7 +179,7 @@ void Quiz::q4Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'b') {
+    else if (choice == "b") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Fantasy") {
@@ -188,7 +188,7 @@ void Quiz::q4Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'c') {
+    else if (choice == "c") {
         for (unsigned i = 0; i < 100; ++i) {
             for (unsigned j = 0; j < sortedList.at(i).getGenres().size(); j++) {
                 if (sortedList.at(i).getGenres().at(j) == "Thriller" || sortedList.at(i).getGenres().at(j) == "Mystery") {
@@ -197,7 +197,7 @@ void Quiz::q4Points(vector<Movie> &sortedList, char choice) {
             }
         }
     }
-    else if (choice == 'd') {
+    else if (choice == "d") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getDuration() < 120) {
                 points.at(i) += 2;
@@ -206,29 +206,29 @@ void Quiz::q4Points(vector<Movie> &sortedList, char choice) {
     }
 }
 
-void Quiz::q5Points(vector<Movie> &sortedList, char choice) {
-    if (choice == 'a') {
+void Quiz::q5Points(vector<Movie> &sortedList, string choice) {
+    if (choice == "a") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getNumOfVotes() < 100000) {
                 points.at(i) += 3;
             }
         }
     }
-    else if (choice == 'b') {
+    else if (choice == "b") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getYear() < 2010 && sortedList.at(i).getNumOfVotes() > 150000) {
                 points.at(i) += 3;
             }
         }
     }
-    else if (choice == 'c') {
+    else if (choice == "c") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getNumOfVotes() > 1500000) {
                 points.at(i) += 3;
             }
         }
     }
-    else if (choice == 'd') {
+    else if (choice == "d") {
         for (unsigned i = 0; i < 100; ++i) {
             if (sortedList.at(i).getNumOfVotes() >= 8.5) {
                 points.at(i) += 3;
@@ -237,47 +237,82 @@ void Quiz::q5Points(vector<Movie> &sortedList, char choice) {
     }
 }
 
-vector<char> Quiz::getQuiz() {
-    vector<char> quizInputs;
-    char questionInput1;
-    char questionInput2;
-    char questionInput3;
-    char questionInput4;
-    char questionInput5;
+vector<string> Quiz::getQuiz() {
+    vector<string> quizInputs;
+    string questionInput1;
+    string questionInput2;
+    string questionInput3;
+    string questionInput4;
+    string questionInput5;
 
     questionOut1();
     do {
         cin >> questionInput1;
+        cout << endl;
+        while (questionInput1 != "a" & questionInput1 != "b" & questionInput1 != "c" & questionInput1 != "d") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> questionInput1;
+            cout << endl;
+        }
     }
-    while (questionInput1 != 'a' & questionInput1 != 'b' & questionInput1 != 'c' & questionInput1 != 'd');
+    while (questionInput1 != "a" & questionInput1 != "b" & questionInput1 != "c" & questionInput1 != "d");
     quizInputs.push_back(questionInput1);
 
     questionOut2();
     do {
         cin >> questionInput2;
+        cout << endl;
+        while (questionInput2 != "a" & questionInput2 != "b" & questionInput2 != "c" & questionInput2 != "d") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> questionInput2;
+            cout << endl;
+        }
     }
-    while (questionInput2 != 'a' & questionInput2 != 'b' & questionInput2 != 'c' & questionInput2 != 'd');
+    while (questionInput2 != "a" & questionInput2 != "b" & questionInput2 != "c" & questionInput2 != "d");
     quizInputs.push_back(questionInput2);
 
     questionOut3();
     do {
         cin >> questionInput3;
+        cout << endl;
+        while (questionInput3 != "a" & questionInput3 != "b" & questionInput3 != "c" & questionInput3 != "d") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> questionInput3;
+            cout << endl;
+        }
     }
-    while (questionInput3 != 'a' & questionInput3 != 'b' & questionInput3 != 'c' & questionInput3 != 'd');
+    while (questionInput3 != "a" & questionInput3 != "b" & questionInput3 != "c" & questionInput3 != "d");
     quizInputs.push_back(questionInput3);
 
     questionOut4();
     do {
         cin >> questionInput4;
+        cout << endl;
+        while (questionInput4 != "a" & questionInput4 != "b" & questionInput4 != "c" & questionInput4 != "d") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> questionInput4;
+            cout << endl;
+        }
     }
-    while (questionInput4 != 'a' & questionInput4 != 'b' & questionInput4 != 'c' & questionInput4 != 'd');
+    while (questionInput4 != "a" & questionInput4 != "b" & questionInput4 != "c" & questionInput4 != "d");
     quizInputs.push_back(questionInput4);
 
     questionOut5();
     do {
         cin >> questionInput5;
+        cout << endl;
+        while (questionInput5 != "a" & questionInput5 != "b" & questionInput5 != "c" & questionInput5 != "d") {
+            cout << "Invalid input, please try again." << endl;
+            cout << endl;
+            cin >> questionInput5;
+            cout << endl;
+        }
     }
-    while (questionInput5 != 'a' & questionInput5 != 'b' & questionInput5 != 'c' & questionInput5 != 'd');
+    while (questionInput5 != "a" & questionInput5 != "b" & questionInput5 != "c" & questionInput5 != "d");
     quizInputs.push_back(questionInput5);
 
     return quizInputs;
