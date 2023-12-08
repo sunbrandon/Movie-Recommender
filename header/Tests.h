@@ -29,21 +29,21 @@ class Tests : public Input {
     string setActorsTest();
     string setDescriptionsTest();
 
-    int getYearTest() const;
-    int getNumOfVotesTest() const;
-    int getDurationTest() const;
+    string getYearTest() const;
+    string getNumOfVotesTest() const;
+    string getDurationTest() const;
 
-    double getRatingTest() const;
+    string getRatingTest() const;
 
     string getTitleTest() const;
     string getProductionTest() const;
     string getMovieIDTest() const;
 
-    vector<string> getGenresTest() const;
-    vector<string> getDirectorsTest() const;
-    vector<string> getWritersTest() const;
-    vector<string> getActorsTest() const;
-    vector<string> getDescriptionsTest() const;
+    string getGenresTest() const;
+    string getDirectorsTest() const;
+    string getWritersTest() const;
+    string getActorsTest() const;
+    string getDescriptionsTest() const;
 
 
     //Output

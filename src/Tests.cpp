@@ -6,37 +6,275 @@ Tests::Tests() {}
 Tests::~Tests() {}
 
 //Movie
-// string Test::setYearTest(int year) {}
-// string Test::setNumOfVotesTest(int votes) {}
-// string Test::setDurationTest(int duration) {}
+string Tests::setYearTest() {
+    Movie *m = new Movie();
 
-// string Test::setRatingTest(double rating) {}
+    m->setYear(1998);
 
-// string Test::setTitleTest(string title) {}
-// string Test::setProductionTest(string production) {}
-// string Test::setMovieIDTest(string movieID) {}
+    delete m;
+    return "Covered: setYear();";
+}
 
-// string Test::setGenresTest(vector<string>& genre) {}
-// string Test::setDirectorsTest(vector<string>& directors) {}
-// string Test::setWritersTest(vector<string>& writers) {}
-// string Test::setActorsTest(vector<string>& actors) {}
-// string Test::setDescriptionsTest(vector<string>& description) {}
+string Tests::setNumOfVotesTest() {
+    Movie *m = new Movie();
 
-// int Test::getYearTest() const {}
-// int Test::getNumOfVotesTest() const {}
-// int Test::getDurationTest() const {}
+    m->setNumOfVotes(108734);
 
-// double Test::getRatingTest() const {}
+    delete m;
+    return "Covered: setNumOfVotes();";
+}
 
-// string Test::getTitleTest() const {}
-// string Test::getProductionTest() const {}
-// string Test::getMovieIDTest() const {}
+string Tests::setDurationTest() {
+    Movie *m = new Movie();
 
-// vector<string> Test::getGenresTest() const {}
-// vector<string> Test::getDirectorsTest() const {}
-// vector<string> Test::getWritersTest() const {}
-// vector<string> Test::getActorsTest() const {}
-// vector<string> Test::getDescriptionsTest() const {}
+    m->setDuration(120);
+
+    delete m;
+    return "Covered: setDuration();";
+}
+
+string Tests::setRatingTest() {
+    Movie *m = new Movie();
+
+    m->setRating(7.2);
+
+    delete m;
+    return "Covered: setRating();";
+}
+
+string Tests::setTitleTest() {
+    Movie *m = new Movie();
+
+    m->setTitle("The Godfather");
+
+    delete m;
+    return "Covered: setTitle();";
+}
+
+string Tests::setProductionTest() {
+    Movie *m = new Movie();
+    
+    m->setProduction("Blue Castle Studios");
+
+    delete m;
+    return "Covered: setProduction();";
+}
+
+string Tests::setMovieIDTest() {
+    Movie *m = new Movie();
+
+    m->setMovieID("A1203");
+
+    delete m;
+    return "Covered: setMovieID();";
+}
+
+string Tests::setGenresTest() {
+    Movie *m = new Movie();
+    vector<string> genres;
+
+    genres.push_back("Action");
+    genres.push_back("Mystery");
+    genres.push_back("Horror");
+
+    m->setGenres(genres);
+
+    delete m;
+    return "Covered: setGenres();";
+}
+
+string Tests::setDirectorsTest() {
+    Movie *m = new Movie();
+    vector<string> directors;
+
+    directors.push_back("Steven Spielberg");
+    directors.push_back("Anthony Russo");
+
+    m->setDirectors(directors);
+
+    delete m;
+    return "Covered: setDirectors();";
+}
+
+string Tests::setWritersTest() {
+    Movie *m = new Movie();
+    vector<string> writers;
+
+    writers.push_back("Steven King");
+    writers.push_back("Aaron Sorkin");
+
+    m->setWriters(writers);
+
+    delete m;
+    return "Covered: setWriters();";
+}
+
+string Tests::setActorsTest() {
+    Movie *m = new Movie();
+    vector<string> actors;
+
+    actors.push_back("Chris Evans");
+    actors.push_back("Chris Pratt");
+
+    m->setActors(actors);
+
+    delete m;
+    return "Covered: setActors();";
+}
+
+string Tests::setDescriptionsTest() {
+    Movie *m = new Movie();
+    vector<string> description;
+
+    description.push_back("This is an example description for some movie A");
+
+    m->setDescriptions(description);
+
+    delete m;
+    return "Covered: setDescriptions();";
+}
+
+string Tests::getYearTest() const {
+    Movie *m = new Movie();
+
+    m->getYear();
+
+    delete m;
+    return "Covered: getYear();";
+}
+
+string Tests::getNumOfVotesTest() const {
+    Movie *m = new Movie();
+
+    m->getNumOfVotes();
+
+    delete m;
+    return "Covered: getNumOfVotes();";
+}
+
+string Tests::getDurationTest() const {
+    Movie *m = new Movie();
+
+    m->getDuration();
+
+    delete m;
+    return "Covered: getDuration();";
+}
+
+string Tests::getRatingTest() const {
+    Movie *m = new Movie();
+
+    m->getRating();
+
+    delete m;
+    return "Covered: getRating();";
+}
+
+string Tests::getTitleTest() const {
+    Movie *m = new Movie();
+
+    m->getTitle();
+
+    delete m;
+    return "Covered: getTitle();";
+}
+
+string Tests::getProductionTest() const {
+    Movie *m = new Movie();
+
+    m->getProduction();
+
+    delete m;
+    return "Covered: getProduction();";
+}
+
+string Tests::getMovieIDTest() const {
+    Movie *m = new Movie();
+
+    m->getMovieID();
+
+    delete m;
+    return "Covered: getMovieID();";
+}
+
+string Tests::getGenresTest() const {
+    Movie *m = new Movie();
+
+    vector<string> genres;
+
+    genres.push_back("Action");
+    genres.push_back("Adventure");
+
+    m->setGenres(genres);
+
+    m->getGenres();
+
+    delete m;
+    return "Covered: getGenres();";
+}
+
+string Tests::getDirectorsTest() const {
+    Movie *m = new Movie();
+
+    vector<string> directors;
+
+    directors.push_back("Joe Russo");
+    directors.push_back("Steven Spielberg");
+
+    m->setDirectors(directors);
+
+    m->getDirectors();
+
+    delete m;
+    return "Covered: getDirectors();";
+}
+
+string Tests::getWritersTest() const {
+    Movie *m = new Movie();
+
+    vector<string> writers;
+
+    writers.push_back("Steven King");
+    writers.push_back("Aaron Sorking");
+
+    m->setWriters(writers);
+
+    m->getWriters();
+
+    delete m;
+    return "Covered: getWriters();";
+}
+
+string Tests::getActorsTest() const {
+    Movie *m = new Movie();
+
+    vector<string> actors;
+        
+    actors.push_back("Chris Pratt");
+    actors.push_back("Adam Sandler");
+
+    m->setActors(actors);
+
+    m->getActors();
+
+    delete m;
+    return "Covered: getActors();";
+}
+
+string Tests::getDescriptionsTest() const {
+    Movie *m = new Movie();
+
+    vector<string> description;
+
+    description.push_back("This is an example description for the Movie B");
+
+    m->setDescriptions(description);
+
+    m->getDescriptions();
+
+    delete m;
+    return "Covered: getDescriptions();";
+}
 
 
 // //Output
@@ -146,17 +384,123 @@ string Tests::filterOutPopularityTest() {
 
 
 // //Sort
-// vector<Movie> Test::sortCSVTest() {}
+string Tests::sortCSVTest() {
+    Sort *s = new Sort();
+
+    vector<Movie> sortedList;
+    sortedList = s->sortCSV();
+
+    delete s;
+    return "Covered: sortCSV();";
+}
 
 
 // //Quiz
-// vector<Movie> Test::quizAlgoTest(vector<Movie> &) {}
-// vector<string> Test::getQuizTest() {}
-// string Test::q1PointsTest(vector<Movie> &, string choice) {}
-// string Test::q2PointsTest(vector<Movie> &, string choice) {}
-// string Test::q3PointsTest(vector<Movie> &, string choice) {}
-// string Test::q4PointsTest(vector<Movie> &, string choice) {}
-// string Test::q5PointsTest(vector<Movie> &, string choice) {}
+string Tests::quizAlgoTest() {
+    Sort *s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+
+    Quiz *q = new Quiz();
+    q->quizAlgo(movieVector);
+
+    delete s;
+    delete q;
+    return "Covered: quizAlgo()";
+}
+
+string Tests::getQuizTest() {
+    Quiz *q = new Quiz();
+    q->getQuiz();
+
+    delete q;
+    return "Covered: getQuiz()";
+}
+
+string Tests::q1PointsTest() {
+    Sort *s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+    vector<string> choices = {"a", "b", "c", "d"};
+
+    Quiz *q = new Quiz();
+    q->q1Points(movieVector, choices.at(0));
+    q->q1Points(movieVector, choices.at(1));
+    q->q1Points(movieVector, choices.at(2));
+    q->q1Points(movieVector, choices.at(3));
+
+    delete s;
+    delete q;
+    return "Covered: q1Points()";
+}
+
+string Tests::q2PointsTest() {
+    Sort *s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+    vector<string> choices = {"a", "b", "c", "d"};
+
+    Quiz *q = new Quiz();
+    q->q2Points(movieVector, choices.at(0));
+    q->q2Points(movieVector, choices.at(1));
+    q->q2Points(movieVector, choices.at(2));
+    q->q2Points(movieVector, choices.at(3));
+
+    delete s;
+    delete q;
+    return "Covered: q2Points()";
+}
+
+string Tests::q3PointsTest() {
+    Sort *s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+    vector<string> choices = {"a", "b", "c", "d"};
+
+    Quiz *q = new Quiz();
+    q->q3Points(movieVector, choices.at(0));
+    q->q3Points(movieVector, choices.at(1));
+    q->q3Points(movieVector, choices.at(2));
+    q->q3Points(movieVector, choices.at(3));
+
+    delete s;
+    delete q;
+    return "Covered: q3Points()";
+}
+
+string Tests::q4PointsTest() {
+    Sort *s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+    vector<string> choices = {"a", "b", "c", "d"};
+
+    Quiz *q = new Quiz();
+    q->q4Points(movieVector, choices.at(0));
+    q->q4Points(movieVector, choices.at(1));
+    q->q4Points(movieVector, choices.at(2));
+    q->q4Points(movieVector, choices.at(3));
+
+    delete s;
+    delete q;
+    return "Covered: q4Points()";
+}
+
+string Tests::q5PointsTest() {
+    Sort *s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+    vector<string> choices = {"a", "b", "c", "d"};
+
+    Quiz *q = new Quiz();
+    q->q5Points(movieVector, choices.at(0));
+    q->q5Points(movieVector, choices.at(1));
+    q->q5Points(movieVector, choices.at(2));
+    q->q5Points(movieVector, choices.at(3));
+
+    delete s;
+    delete q;
+    return "Covered: q5Points()";
+}
 
 
 //Search
@@ -334,10 +678,102 @@ string Tests::randomAlgoTest() {
 
 
 // //Result
-// string Test::quizResultTest(vector <Movie>&) {}
-// string Test::similarResultTest(vector <Movie>&, string) {}
-// string Test::filterResultTest(vector <Movie>&, vector <string>&) {}
-// string Test::randomResultTest(Movie) {}
+string Tests::quizResultTest() {
+    // vector<string> genres = {"Horror", "Action"};
+    // vector<string> directors = {"Steven Spielberg"};
+    // vector<string> writers = {"Stephen King"};
+    // vector<string> actors = {"Dwayne Johnson", "Morgan Freeman"};
+    // vector<string> descriptions = {"A great movie."};
+    // Movie *m1 = new Movie("111111", "Test Movie 1", 2023, genres, 120, directors, writers, "Lionsgate", actors, descriptions, 8.8, 957);
+    // Movie *m2 = new Movie("222222", "Test Movie 2", 2026, genres, 150, directors, writers, "Warner Bros.", actors, descriptions, 9.2, 1001);
+    // Movie *m3 = new Movie("333333", "Test Movie 3", 2030, genres, 180, directors, writers, "DreamWorks Animation", actors, descriptions, 10.0, 498);
+    // vector<Movie> movieVector;
+    // movieVector.push_back(*m1);
+    // movieVector.push_back(*m2);
+    // movieVector.push_back(*m3);
+
+    Sort* s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+    
+    Result *r = new Result();
+    r->quizResult(movieVector);
+
+    delete s;
+    delete r;
+    return "Covered: quizResult()";
+}
+
+string Tests::similarResultTest() {
+    // vector<string> genres = {"Horror", "Action"};
+    // vector<string> directors = {"Steven Spielberg"};
+    // vector<string> writers = {"Stephen King"};
+    // vector<string> actors = {"Dwayne Johnson", "Morgan Freeman"};
+    // vector<string> descriptions = {"A great movie."};
+    // Movie *m1 = new Movie("111111", "Test Movie 1", 2023, genres, 120, directors, writers, "Lionsgate", actors, descriptions, 8.8, 957);
+    // Movie *m2 = new Movie("222222", "Test Movie 2", 2026, genres, 150, directors, writers, "Warner Bros.", actors, descriptions, 9.2, 1001);
+    // Movie *m3 = new Movie("333333", "Test Movie 3", 2030, genres, 180, directors, writers, "DreamWorks Animation", actors, descriptions, 10.0, 498);
+    // vector<Movie> movieVector;
+    // movieVector.push_back(*m1);
+    // movieVector.push_back(*m2);
+    // movieVector.push_back(*m3);
+
+    Sort* s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+
+    string similarTitle = "Whiplash";
+    
+    Result *r = new Result();
+    r->similarResult(movieVector, similarTitle);
+
+    delete s;
+    delete r;
+    return "Covered: similarResult()";
+}
+
+string Tests::filterResultTest() {
+    // vector<string> genres = {"Horror", "Action"};
+    // vector<string> directors = {"Steven Spielberg"};
+    // vector<string> writers = {"Stephen King"};
+    // vector<string> actors = {"Dwayne Johnson", "Morgan Freeman"};
+    // vector<string> descriptions = {"A great movie."};
+    // Movie *m1 = new Movie("111111", "Test Movie 1", 2023, genres, 120, directors, writers, "Lionsgate", actors, descriptions, 8.8, 957);
+    // Movie *m2 = new Movie("222222", "Test Movie 2", 2026, genres, 150, directors, writers, "Warner Bros.", actors, descriptions, 9.2, 1001);
+    // Movie *m3 = new Movie("333333", "Test Movie 3", 2030, genres, 180, directors, writers, "DreamWorks Animation", actors, descriptions, 10.0, 498);
+    // vector<Movie> movieVector;
+    // movieVector.push_back(*m1);
+    // movieVector.push_back(*m2);
+    // movieVector.push_back(*m3);
+
+    Sort* s = new Sort();
+    vector<Movie> movieVector;
+    movieVector = s->sortCSV();
+
+    vector<string> filters = {"Romance", "2020", "100", "7.0", "4000"};
+    
+    Result *r = new Result();
+    r->filterResult(movieVector, filters);
+
+    delete s;
+    delete r;
+    return "Covered: filterResult()";
+}
+
+string Tests::randomResultTest() {
+    vector<string> genres = {"Horror", "Action"};
+    vector<string> directors = {"Steven Spielberg"};
+    vector<string> writers = {"Stephen King"};
+    vector<string> actors = {"Dwayne Johnson", "Morgan Freeman"};
+    vector<string> descriptions = {"A great movie."};
+    Movie *m1 = new Movie("111111", "Test Movie 1", 2023, genres, 120, directors, writers, "Lionsgate", actors, descriptions, 8.8, 957);
+    
+    Result *r = new Result();
+    r->randomResult(*m1);
+
+    delete r;
+    return "Covered: randomResult()";
+}
 
 
 //Input
