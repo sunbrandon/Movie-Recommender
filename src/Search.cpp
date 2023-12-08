@@ -145,25 +145,42 @@ vector<Movie> Search::filterAlgo(vector<Movie>& sortedList, vector<string>& filt
 
 void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
     unsigned m = 1;
+    
+    for (unsigned i = 0; i < movieInput.size(); ++i) {
+        movieInput.at(i) = toupper(movieInput.at(i));
+    }
+
     for (unsigned i = 0; i < 100; i++) {    //locate the inputted movie
-        if (movieInput == movies.at(i).getTitle()) {
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
+        if (movieInput == movieListName) {
             m = i;
         }
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by year
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
         if (movies.at(i).getYear() >= movies.at(m).getYear() - 5 & movies.at(i).getYear() <= movies.at(m).getYear() + 5) {
-            if (movies.at(i).getTitle() != movieInput) {
+            if (movieListName != movieInput) {
                 points.at(i) += 1;
             }
         }
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by genres
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
         for (unsigned j = 0; j < movies.at(i).getGenres().size(); j++) {    //compared to size of getGenres() vector for i-th movie
             for (unsigned k = 0; k < movies.at(m).getGenres().size(); k++) {  //compared to size of getGenres() vector for movieInput
                 if (movies.at(m).getGenres().at(k) == movies.at(i).getGenres().at(j)) { //comparing genres case-by-case
-                    if (movies.at(i).getTitle() != movieInput) {
+                    if (movieListName != movieInput) {
                         points.at(i) += 5;
                     }
                 }
@@ -172,31 +189,43 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by duration
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
         if (movies.at(i).getDuration() >= movies.at(m).getDuration() - 7 & movies.at(i).getDuration() <= movies.at(m).getDuration() + 7) {  //approx. standard deviation of 7
-            if (movies.at(i).getTitle() != movieInput) {
+            if (movieListName != movieInput) {
                 points.at(i) += 2;
             }
         }
         else if (movies.at(i).getDuration() >= movies.at(m).getDuration() - 15 & movies.at(i).getDuration() <= movies.at(m).getDuration() + 15) {   //approx. two standard deviations
-            if (movies.at(i).getTitle() != movieInput) {
+            if (movieListName != movieInput) {
                 points.at(i) += 1;
             }
         }
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by popularity (number of votes)
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
         if (movies.at(i).getNumOfVotes() >= movies.at(m).getNumOfVotes() - 100000 & movies.at(i).getNumOfVotes() <= movies.at(m).getNumOfVotes() + 100000) {
-            if (movies.at(i).getTitle() != movieInput) {
+            if (movieListName != movieInput) {
                 points.at(i) += 1;
             }
         }
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by directors
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
         for (unsigned j = 0; j < movies.at(i).getDirectors().size(); j++) {    //compared to size of getDirectors() vector for i-th movie
             for (unsigned k = 0; k < movies.at(m).getDirectors().size(); k++) {  //compared to size of getDirectors() vector for movieInput
                 if (movies.at(m).getDirectors().at(k) == movies.at(i).getDirectors().at(j)) { //comparing directors case-by-case
-                    if (movies.at(i).getTitle() != movieInput) {
+                    if (movieListName != movieInput) {
                         points.at(i) += 2;
                     }
                 }
@@ -205,10 +234,14 @@ void Search::searchSimilarPoints(string movieInput, vector<Movie>& movies) {
     }
 
     for (unsigned i = 0; i < 100; i++) {    //assign point values by actors
+        string movieListName = movies.at(i).getTitle();
+        for (unsigned i = 0; i < movieListName.size(); ++i) {
+            movieListName.at(i) = toupper(movieListName.at(i));
+        }
         for (unsigned j = 0; j < movies.at(i).getActors().size(); j++) {    //compared to size of getActors() vector for i-th movie
             for (unsigned k = 0; k < movies.at(m).getActors().size(); k++) {  //compared to size of getActors() vector for movieInput
                 if (movies.at(m).getActors().at(k) == movies.at(i).getActors().at(j)) { //comparing actors case-by-case
-                    if (movies.at(i).getTitle() != movieInput) {
+                    if (movieListName != movieInput) {
                         points.at(i) += 1;
                     }
                 }
