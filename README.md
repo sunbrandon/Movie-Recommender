@@ -56,6 +56,9 @@ To a lesser extent, we also considered the idea of the Interface Segregation Pri
  > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
  > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
+
+ ## Final UML
+ ![CS100_Final_UML](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/995b92c8-87c9-4295-8a6a-a52e5396196b)
  
  ## Screenshots
  ![1](https://github.com/cs100/final-project-dlee486-alin166-bsun045-dbanh007/assets/144963579/3fee3963-0280-4739-bf99-c20452e5f043)
