@@ -23,10 +23,11 @@ vector<unsigned> Search::getPoints() {  //if issues, check here
 
 vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similar) {
     vector<Movie> similarRecommend;
-    string similarTitle = similar;
     bool movieFound = false;
 
     do {
+        string similarTitle = similar;
+
         for (int i = 0; i < similarTitle.size(); i++) {
                 similarTitle.at(i) = toupper(similarTitle.at(i));
         }
@@ -47,7 +48,7 @@ vector<Movie> Search::similarAlgo(vector<Movie> &sortedList, string similar) {
             cout << endl;
             cout << "The movie entered is not in the database. Please try again." << endl;
             cout << endl;
-            getline(cin, similarTitle);
+            getline(cin, similar);
         }
     } while (movieFound == false);
 
